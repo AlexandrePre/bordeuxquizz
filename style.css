@@ -3,7 +3,10 @@
 
 :root{
     --primary: #131734; 
+    --secondary: #fff;
 }
+
+
 
 * {
     margin: 0;
@@ -11,13 +14,16 @@
     box-sizing: border-box;
 }
 
+header {
+    position:fixed;
+}
 
 
 .container{
     background: var(--primary);
     display: flex;
     justify-content: center;
-    align-items: center;
+    margin-top: 4em;
     height: 100vh;
 }
 
@@ -27,9 +33,11 @@
     align-items: center;
 }
 
+
+
 .bigTitle{
     font-family: 'Lato', sans-serif;
-    font-size: clamp(2rem, 10vw, 7rem);
+    font-size: clamp(3rem, 10vw, 7rem);
     font-weight: bold;
     background-clip: text;
     -webkit-background-clip: text;
@@ -38,6 +46,7 @@
     color: transparent;
     animation: up 3s;
     letter-spacing: 0.2em;
+    text-align: center;
 }
 
 
@@ -51,9 +60,91 @@
     }
 }
 
-.button{
+.button1{
     position: absolute;
-    left: 50%;
-    top: 80%;
+    left: center;
+    top: 60%;
+}
+
+.button1 img{
+    width: 25em;
+}
+
+.image1{
+    position: absolute;
+    left: 10%;
+    top: 40%;
+}
+
+.image1 img{
+    width: 5em;
+}
+
+.image2{
+    position: absolute;
+    right: 10%;
+    top: 40%;
+}
+
+.image2 img{
+    width: 7em;
+}
+
+@media screen and  (max-width: 390px){
+    .container{
+        margin-top: 8em;
+    }
+    .button1 img{
+        width: 15em;
+    }
+    .image1 img{
+        display: none;
+    }
+    .image2 img{
+        display: none;
+    }
+}
+
+
+.team{
+    display: flex;
+    height: 100vh;
+}
+
+.bigContainer{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10em;
+    
+}
+
+.containerTeam{
+    display: flex;
+    justify-content: center;
+    gap: 10em;
+}
+
+.containerTeam1{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 3em;
+}
+
+.containerTeam2{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 3em;
+}
+
+.containerTeam2 img{
+    margin: 0 auto;
+    width: 5em;
+}
+
+.reglement{
+    width: 30%;
 }
 

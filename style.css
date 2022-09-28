@@ -1,7 +1,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,900&display=swap');
 
-
+:root{
+    --primary: #131734; 
+}
 
 * {
     margin: 0;
@@ -10,11 +12,10 @@
 }
 
 body{
-    background: #0a0334;
-    height: 100vh;
 }
 
 .container{
+    background: var(--primary);
     display: flex;
     justify-content: center;
     align-items: center;

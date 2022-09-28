@@ -16,7 +16,6 @@
 
 header {
     position: fixed;
-    z-index: -2;
     background: red;
     width: 100%;
 }
@@ -111,14 +110,13 @@ header {
 .team{
     display: flex;
     height: 100vh;
-    z-index: -300;
 }
 
 .bigContainer{
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 10em;
+    gap: 15em;
     
 }
 
@@ -126,7 +124,6 @@ header {
     display: flex;
     justify-content: center;
     gap: 10em;
-    z-index: -444;
 }
 
 .containerTeam1{
@@ -150,5 +147,6 @@ header {
 
 .reglement{
     width: 30%;
+    margin-left: 3em;
 }
 

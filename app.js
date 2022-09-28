@@ -1,5 +1,5 @@
 
-/* const header = document.getElementsByTagName("header");
+const header = document.querySelector(".header");
 
 const container = document.querySelector('.container');
 
@@ -17,9 +17,11 @@ window.addEventListener('scroll', () => {
     if (scrollTop > topContainerToTopViewport.toFixed()) {
         header.style.display = 'block';
         footer.style.display = 'block';
-    }
+    } else {header.style.display = 'none';
+    footer.style.display = 'none';
+}
 });
- */
+
 
 
 

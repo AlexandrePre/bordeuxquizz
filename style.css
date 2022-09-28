@@ -26,7 +26,8 @@
 
 header {
     position: fixed;
-
+    background: red;
+    width: 100%;
 }
 
 
@@ -137,7 +138,7 @@ header {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 10em;
+    gap: 15em;
 
 }
 
@@ -168,6 +169,7 @@ header {
 
 .reglement {
     width: 30%;
+    margin-left: 3em;
 }
 
 

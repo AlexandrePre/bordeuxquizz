@@ -1,4 +1,4 @@
-# bordeuxquizz
+# bordeauxquizz
 
 Création d'un quizz sur bordeaux et la wild.
 Ce jeux est inspiré de Burger Quizz 

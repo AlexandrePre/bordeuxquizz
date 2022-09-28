@@ -1,8 +1,7 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,900&display=swap');
 
-:root{
-    --primary: #131734; 
+:root {
+    --primary: #131734;
     --secondary: #fff;
 }
 
@@ -14,21 +13,39 @@
     box-sizing: border-box;
 }
 
-header {
-    position: fixed;
-    background: red;
+.header {
+    display: flex;
+    height: 10vh;
     width: 100%;
+    position: fixed;
+}
+
+.header img {
+    max-width: 100%;
+    height: 50%;
 }
 
 
-.container{
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    height: 70vh;
+}
+
+
+
+
+.container {
     background: var(--primary);
     display: flex;
     justify-content: center;
     height: 100vh;
 }
 
-.containerTitle{
+.containerTitle {
     height: 18rem;
     overflow-y: hidden;
     align-items: center;
@@ -38,7 +55,7 @@ header {
 
 
 
-.bigTitle{
+.bigTitle {
     font-family: 'Lato', sans-serif;
     font-size: clamp(3rem, 10vw, 7rem);
     font-weight: bold;
@@ -58,110 +75,135 @@ header {
     from {
         transform: translateY(18rem);
     }
+
     to {
         transform: translateY(0);
     }
 }
 
-.button1{
+
+
+.button1 {
     position: absolute;
     left: center;
     top: 60%;
 }
 
-.button1 img{
-    width: 25em;
+.button1 img {
+    width: 15em;
 }
 
-.image1{
+.image1 {
     position: absolute;
     left: 10%;
     top: 40%;
 }
 
-.image1 img{
-    width: 5em;
+.image1 img {
+    display: none;
 }
 
-.image2{
+.image2 {
     position: absolute;
     right: 10%;
     top: 40%;
 }
 
-.image2 img{
-    width: 7em;
-}
-
-@media screen and  (max-width: 320px){
-    
-    .button1 img{
-        width: 15em;
-    }
-    .image1 img{
-        display: none;
-    }
-    .image2 img{
-        display: none;
-    }
-    .bigContainer{
-        display: flex;
-        flex-direction: column;
-    }
-    .containerTeam{
-        display: flex;
-        flex-direction: column;
-    }
-
+.image2 img {
+    display: none;
 }
 
 
-.team{
+.team {
     display: flex;
     height: 100vh;
 }
 
-.bigContainer{
+.bigContainer {
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 15em;
-    
+    flex-direction: column;
+
 }
 
-.containerTeam{
-    display: flex;
-    justify-content: center;
-    gap: 10em;
+.reglement {
+    width: 30%;
+    margin-left: 3em;
 }
 
-.containerTeam1{
+.containerTeam {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.containerTeam1 {
     display: flex;
     flex-direction: column;
     text-align: center;
     gap: 3em;
 }
 
-.containerTeam2{
+.containerTeam2 {
     display: flex;
     flex-direction: column;
     text-align: center;
     gap: 3em;
 }
 
-.containerTeam2 img{
+.containerTeam2 img {
     margin: 0 auto;
     width: 5em;
 }
 
-.reglement{
-    width: 30%;
-    margin-left: 3em;
+
+
+
+.container .button {
+    display: flex;
+    justify-content: flex-end;
 }
 
 .footer {
     position: fixed;
     bottom: 0;
-    background: red;
-    width: 100%;
+    background-color: red;
+}
+
+
+
+@media screen and (min-width: 768px) {
+
+
+    .button1 img {
+        width: 25em;
+
+    }
+
+    .image1 img {
+        width: 5em;
+        display: block;
+    }
+
+    .image2 img {
+        width: 7em;
+        display: block;
+    }
+
+    .bigContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 15em;
+
+
+    }
+
+    .containerTeam {
+        display: flex;
+        justify-content: center;
+        gap: 10em;
+        flex-direction: row;
+
+    }
 }

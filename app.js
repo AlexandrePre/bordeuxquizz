@@ -1,4 +1,4 @@
-const header = document.querySelector("img");
+const header = document.querySelector(".header");
 const container = document.querySelector('.container');
 const footer = document.querySelector("h3");
 const quizz1 = document.querySelector('.quizz1');

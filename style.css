@@ -15,7 +15,10 @@
 }
 
 header {
-    position:fixed;
+    position: fixed;
+    z-index: -2;
+    background: red;
+    width: 100%;
 }
 
 
@@ -23,7 +26,6 @@ header {
     background: var(--primary);
     display: flex;
     justify-content: center;
-    margin-top: 4em;
     height: 100vh;
 }
 
@@ -109,6 +111,7 @@ header {
 .team{
     display: flex;
     height: 100vh;
+    z-index: -300;
 }
 
 .bigContainer{
@@ -123,6 +126,7 @@ header {
     display: flex;
     justify-content: center;
     gap: 10em;
+    z-index: -444;
 }
 
 .containerTeam1{

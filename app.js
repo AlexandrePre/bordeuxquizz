@@ -1,5 +1,5 @@
 
-const header = document.getElementsByTagName("header");
+/* const header = document.getElementsByTagName("header");
 
 const container = document.querySelector('.container');
 
@@ -19,7 +19,7 @@ window.addEventListener('scroll', () => {
         footer.style.display = 'block';
     }
 });
-
+ */
 
 
 

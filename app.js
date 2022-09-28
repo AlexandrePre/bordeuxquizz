@@ -24,27 +24,8 @@ window.addEventListener('scroll', () => {
 
 });
 
-/*function scroll() {
-    if (screenTop < "634px") {
-        header.style.display = 'none';
-    } else {
-        header.style.display = 'block';
-    }
-
-}
-scroll();
 
 
-
-
-
-/*
-document.querySelector(img).style.display = none;
-  /*  } else {
-  document.querySelector(header).style.display = block;
-
-}
-*/
 
 
 

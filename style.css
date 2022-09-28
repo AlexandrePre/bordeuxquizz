@@ -32,6 +32,8 @@ header {
     height: 18rem;
     overflow-y: hidden;
     align-items: center;
+    margin-top: 10em;
+
 }
 
 
@@ -91,10 +93,8 @@ header {
     width: 7em;
 }
 
-@media screen and  (max-width: 390px){
-    .container{
-        margin-top: 8em;
-    }
+@media screen and  (max-width: 320px){
+    
     .button1 img{
         width: 15em;
     }
@@ -104,6 +104,15 @@ header {
     .image2 img{
         display: none;
     }
+    .bigContainer{
+        display: flex;
+        flex-direction: column;
+    }
+    .containerTeam{
+        display: flex;
+        flex-direction: column;
+    }
+
 }
 
 
@@ -150,3 +159,9 @@ header {
     margin-left: 3em;
 }
 
+.footer {
+    position: fixed;
+    bottom: 0;
+    background: red;
+    width: 100%;
+}

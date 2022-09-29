@@ -1,5 +1,6 @@
 
 const header = document.querySelector(".header");
+const questionMort = document.querySelector(".questionMort");
 
 const container = document.querySelector('.container');
 const footer = document.querySelector('.footer')
@@ -15,9 +16,9 @@ window.addEventListener('scroll', () => {
 
     const { scrollTop, clientHeight } = document.documentElement;
 
-    const topContainerToTopViewport = quizz1.getBoundingClientRect().top;
+    const topContainerToTopViewport = quizz1.getBoundingClientRect().bottom;
 
-    if (scrollTop > topContainerToTopViewport.toFixed()) {
+    if (scrollTop > topContainerToTopViewport) {
         header.style.display = 'block';
         footer.style.display = 'block';
     } else {
@@ -26,4 +27,6 @@ window.addEventListener('scroll', () => {
 
     }
 });
+
+
 

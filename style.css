@@ -13,16 +13,29 @@
     box-sizing: border-box;
 }
 
+
+header {
+    display: flex;
+    height: 5vh;
+    background-color: var(--primary);
+    justify-content: center;
+}
+
 .header {
     display: flex;
-    height: 10vh;
+    height: 5vh;
     width: 100%;
     position: fixed;
+    align-items: center;
+    justify-content: center;
 }
 
 .header img {
     max-width: 100%;
-    height: 50%;
+    height: 5vh;
+    position: absolute;
+    left: 50%;
+
 }
 
 
@@ -34,6 +47,8 @@
     align-items: center;
     background: var(--primary);
     height: 100vh;
+    margin-bottom: 5rem;
+
 }
 
 
@@ -81,7 +96,7 @@
 .button1 {
     position: absolute;
     left: center;
-    top: 60%;
+    top: 45%;
 }
 
 .button1 img {
@@ -111,7 +126,7 @@
 
 .team {
     display: flex;
-    height: 100vh;
+    height: 70vh;
 }
 
 .bigContainer {
@@ -158,11 +173,140 @@
     justify-content: flex-end;
 }
 
+.quizz1 {
+    height: 100vh;
+    margin-top: 3rem;
+
+}
+
+.diapo1 {
+    display: grid;
+    height: 70vh;
+    grid-template-rows: 1fr, 1fr, 1fr, 1fr, 1fr, 1fr;
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+    align-items: center;
+    margin: 10px;
+    background-color: antiquewhite;
+    --c: 1em;
+    --nc: calc(100% - var(--c));
+    clip-path: polygon(0 var(--c), var(--c) var(--c), var(--c) 0,
+            var(--nc) 0, var(--nc) var(--c), 100% var(--c),
+            100% var(--nc), var(--nc) var(--nc), var(--nc) 100%,
+            var(--c) 100%, var(--c) var(--nc), 0 var(--nc));
+
+
+}
+
+h2 {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+}
+
+h4 {
+    text-align: center;
+}
+
+.quizz2 {
+    height: 100vh;
+    margin-top: 3rem;
+}
+
+.diapo1-wild {
+    display: grid;
+    height: 70vh;
+    grid-template-rows: 1fr, 1fr, 1fr, 1fr, 1fr, 1fr;
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+    align-items: center;
+    margin: 10px;
+    background-color: antiquewhite;
+    --c: 1em;
+    --nc: calc(100% - var(--c));
+    clip-path: polygon(0 var(--c), var(--c) var(--c), var(--c) 0,
+            var(--nc) 0, var(--nc) var(--c), 100% var(--c),
+            100% var(--nc), var(--nc) var(--nc), var(--nc) 100%,
+            var(--c) 100%, var(--c) var(--nc), 0 var(--nc));
+
+
+
+}
+
+
+
+
+
+.questionMort {
+    height: 100vh;
+    margin-top: 3rem;
+}
+
+.questionfinal {
+    display: grid;
+    height: 70vh;
+    grid-template-rows: 2fr, 1fr, 1fr;
+    grid-template-columns: 1fr, 1fr, fr;
+    row-gap: 2rem;
+    align-items: center;
+    margin: 10px;
+    background-color: antiquewhite;
+    --c: 1em;
+    --nc: calc(100% - var(--c));
+    clip-path: polygon(0 var(--c), var(--c) var(--c), var(--c) 0,
+            var(--nc) 0, var(--nc) var(--c), 100% var(--c),
+            100% var(--nc), var(--nc) var(--nc), var(--nc) 100%,
+            var(--c) 100%, var(--c) var(--nc), 0 var(--nc));
+}
+
+
+.choco {
+    position: absolute;
+    left: 40%;
+
+
+}
+
+.choco img {
+    width: 20vw;
+    height: 20vh;
+}
+
 .footer {
     position: fixed;
     bottom: 0;
-    background-color: red;
+    background-color: var(--primary);
+    width: 100%;
+    height: 20vw;
+    margin-bottom: 1px;
 }
+
+.cannele {
+    position: absolute;
+    left: 10%;
+
+}
+
+.cannele img {
+
+    width: 20vw;
+    height: 10vh;
+}
+
+.macaron {
+    position: absolute;
+    left: 70%;
+
+}
+
+.macaron img {
+
+    width: 20vw;
+    height: 10vh;
+}
+
 
 
 

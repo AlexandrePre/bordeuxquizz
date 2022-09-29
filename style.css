@@ -1,63 +1,84 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,900&display=swap');
 
+html {
+    scroll-behavior: smooth;
+  }
+
 :root {
     --primary: #131734;
     --secondary: #fff;
 }
-
-
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 .header {
-    display: flex;
-    height: 10vh;
     width: 100%;
     position: fixed;
-}
-
-.header img {
-    max-width: 100%;
-    height: 50%;
-}
-
-
-
-.container {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    align-items: center;
-    height: 70vh;
-}
-
-
-
-
-.container {
     background: var(--primary);
+    
+}
+
+.header div{
+    height: 10vh;
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+.header div a{
+    position: absolute;
+    left: 3%;
+    text-decoration: none;
+    color: var(--secondary);
+}
+
+.header ion-icon{
+   font-size:  2em;
+}
+
+.header h3{
+    color: var(--secondary);
+    font-size: clamp(1.4rem, 2vw, 5rem);
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5em;
+    background: var(--primary);
     height: 100vh;
+    padding-top: 4em;
+}
+
+.container a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+    color: var(--secondary);
+    text-decoration: none;
+    font-size: 1.4em;
+    font-weight: 900;
+}
+
+.container ion-icon{
+    color: var(--secondary);
+    font-size: 2.7em;
 }
 
 .containerTitle {
-    height: 18rem;
+    height: 10rem;
     overflow-y: hidden;
     align-items: center;
-    margin-top: 10em;
-
 }
-
-
-
 .bigTitle {
     font-family: 'Lato', sans-serif;
-    font-size: clamp(3rem, 10vw, 7rem);
+    font-size: clamp(2.5rem, 10vw, 7rem);
     font-weight: bold;
     background-clip: text;
     -webkit-background-clip: text;
@@ -68,142 +89,95 @@
     letter-spacing: 0.2em;
     text-align: center;
 }
-
-
-
 @keyframes up {
     from {
         transform: translateY(18rem);
     }
-
     to {
         transform: translateY(0);
     }
 }
 
-
-
-.button1 {
-    position: absolute;
-    left: center;
-    top: 60%;
-}
-
 .button1 img {
-    width: 15em;
+    width: 12em;
 }
-
-.image1 {
-    position: absolute;
-    left: 10%;
-    top: 40%;
-}
-
-.image1 img {
-    display: none;
-}
-
-.image2 {
-    position: absolute;
-    right: 10%;
-    top: 40%;
-}
-
-.image2 img {
-    display: none;
-}
-
 
 .team {
     display: flex;
     height: 100vh;
 }
-
 .bigContainer {
     display: flex;
     flex-direction: column;
-
 }
-
 .reglement {
     width: 30%;
     margin-left: 3em;
 }
-
 .containerTeam {
     display: flex;
     flex-direction: column;
-
 }
-
 .containerTeam1 {
     display: flex;
     flex-direction: column;
     text-align: center;
     gap: 3em;
 }
-
 .containerTeam2 {
     display: flex;
     flex-direction: column;
     text-align: center;
     gap: 3em;
 }
-
 .containerTeam2 img {
     margin: 0 auto;
     width: 5em;
 }
-
-
-
-
 .container .button {
     display: flex;
     justify-content: flex-end;
 }
-
 .footer {
     position: fixed;
     bottom: 0;
     background-color: red;
 }
-
-
-
 @media screen and (min-width: 768px) {
-
-
-    .button1 img {
-        width: 25em;
-
+    .header div{
+        height: 12vh;
     }
-
-    .image1 img {
-        width: 5em;
-        display: block;
+    .header ion-icon{
+        font-size: 3.5em;
     }
-
-    .image2 img {
-        width: 7em;
-        display: block;
+    .header div a{
+        left: 15%;
     }
-
+    .container {
+        padding-top: initial;
+        gap: 10em;
+    }
+    .container a{
+        font-size: 2.5em;
+    }
+    
+    .container ion-icon{
+        font-size: 3em;
+    }
+    .containerTitle{
+        height: 18em;
+    }
     .bigContainer {
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
         gap: 15em;
-
-
     }
-
     .containerTeam {
         display: flex;
         justify-content: center;
         gap: 10em;
         flex-direction: row;
-
     }
 }

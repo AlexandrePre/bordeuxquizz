@@ -8,7 +8,7 @@ const team = document.querySelector('containerTeam1');
 
 
 header.style.display = 'none';
-footer.style.display = 'block';
+footer.style.display = 'none';
 
 
 window.addEventListener('scroll', () => {
@@ -27,3 +27,7 @@ window.addEventListener('scroll', () => {
     }
 });
 
+
+import { w3cHtmlValidator } from 'w3c-html-validator';
+const options = { filename: './index.html' };
+w3cHtmlValidator.validate(options).then(console.log);

@@ -1,16 +1,4 @@
 
-const team = document.getElementsByClassName("team");
-const header = document.getElementsByClassName("header");
-
-window.addEventListener('scroll', () => {
-    const { scrollTop, clientHeight } = document.documentElement;
-    const topContainerToTopViewport = team.getBoundingClientRect().top;
-    if (scrollTop > topContainerToTopViewport) {
-        header.style.display = 'block';
-    } else {
-        header.style.display = 'none';
-    }
-});
 
 // formulaire pour rentrer le nom des équipes
 const btn1 = document.getElementById("btn1");

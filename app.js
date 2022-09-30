@@ -18,7 +18,7 @@ window.addEventListener('scroll', () => {
 
     const { scrollTop, clientHeight } = document.documentElement;
 
-    const topContainerToTopViewport = quizz1.getBoundingClientRect().top;
+    const topContainerToTopViewport = quizz1.getBoundingClientRect().bottom;
 
     if (scrollTop > topContainerToTopViewport) {
         header.style.display = 'block';

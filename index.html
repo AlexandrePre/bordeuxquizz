@@ -6,83 +6,72 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
     <link rel="stylesheet" href="style.css">
 </head>
 
 
 <body>
+    
+   
+
     <header class="header">
         <div>
-            <img src="/assets/cannelé noir et blanc.png" alt="">
+            <a href=""><ion-icon name="refresh-circle-outline"></ion-icon></a>
+            <h3>Bordeaux <br> Quizzzz</h3>
+            
         </div>
     </header>
-
-
+    
     <section class="container">
         <div class="containerTitle">
             <h1 class="bigTitle">Bordeaux <br> Quizzzz</h1>
         </div>
-        <div class="button1"><a href=""><img src="/assets/PARTICIPER.png" alt=""></a></div>
-        <div class="image1"><img src="/assets/cannelé noir et blanc.png" alt="image cannelé"></div>
-        <div class="image2"><img src="/assets/Logo macaron noir et blanc.png" alt="image cannelé"></div>
+        <div><a href="#ancrePlay"><ion-icon name="play"></ion-icon>PLAY</a></div>
     </section>
 
-    <section class="team">
-        <div class="bigContainer">
-            <div class="reglement">
-                <h2>Réglement</h2>
+    
 
+    <section class="team" id="ancrePlay" >
+        <div class="bigContainer" >
+            <div class="reglement" >
+                <div>
+                <h2 >Réglement</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi iusto esse a, maxime dicta impedit facere, sunt nihil adipisci corrupti architecto! Placeat harum ratione minus vel aspernatur tenetur sit quis?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque vel recusandae saepe excepturi placeat eveniet totam distinctio nam aspernatur, quae nulla nesciunt. Vel adipisci aliquam modi nostrum excepturi magnam? Eius.</p>
+                    </div>
             </div>
 
-            <div class="containerTeam">
+            <form id="form" action="">
+                <input type="text" id="text1" placeholder="team?" value="">
+                <button id="btn1">OK</button>
+                <input type="text" id="text2" placeholder="team?" value="">
+                <button id="btn2">ok</button>
+            </form>
+
+            <div class="containerTeam" >
                 <div class="containerTeam1">
-                    <input type="text">
-                    <h2>Equipe 1</h2>
-                    <p>1</p>
-                    <button>Lancez les dès</button>
-                    <img src="/assets/cannelé noir et blanc.png" alt="cannelé">
+                    <h4 id="team1"></h4>
+                    <img src="/assets/cannelenoiretblanc.png" alt="">
                 </div>
                 <div class="containerTeam2">
-                    <input type="text">
-                    <h2>Equipe 2</h2>
-                    <p>2</p>
-                    <button>lancez les dès</button>
-                    <img src="/assets/Logo macaron noir et blanc.png" alt="macaron">
+                    <h4 id="team2"></h4>
+                    <img src="/assets/Logomacaronnoiretblanc.png" alt="macaron">
                 </div>
             </div>
 
-        </div>
-    </section>
-
-
-    <section class="quizz1">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit iure deleniti porro nisi similique doloremque
-            eius. Nisi, dicta, reprehenderit fuga consectetur, ipsam ad maxime modi quas quidem vero molestiae
-            laudantium.</p>
-        <button class="button">Suivant</button>
-    </section>
-
-
-
-    <section class="questionMort">
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique nemo laudantium nesciunt doloremque odit.
-            Tempore quod odio enim? Explicabo qui ex officia quaerat recusandae unde similique voluptatem perferendis
-            dicta corrupti!</p>
-
-
-    </section>
-
-    <footer>
-        <div class="footer">
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum, mollitia aut culpa possimus veniam
-                deleniti illum cumque nobis tempore omnis reiciendis aspernatur quibusdam labore, numquam tempora porro
-                saepe eum nemo.</p>
+            <button id="btnWin">Qui commence?</button>
 
         </div>
-    </footer>
+    </section>
 
+
+    
 
     <script src="app.js"></script>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 </body>
 

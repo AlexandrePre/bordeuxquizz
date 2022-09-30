@@ -1,3 +1,4 @@
+/* create variable for scrool header and footer */
 
 const header = document.querySelector(".header");
 const questionMort = document.querySelector(".questionMort");
@@ -11,6 +12,7 @@ const team = document.querySelector('containerTeam1');
 header.style.display = 'none';
 footer.style.display = 'none';
 
+/* fonction for scrool */
 
 window.addEventListener('scroll', () => {
 
@@ -27,6 +29,49 @@ window.addEventListener('scroll', () => {
 
     }
 });
+
+/* create variable for rep good team cannele */
+
+const scoreCanneleTexte = document.querySelector('.scorecannele');
+const scoreMacaronTexte = document.querySelector('.scoremacaron');
+
+const good1 = document.querySelector('.rep1q1');
+
+
+let scoreCannele = 0;
+let scoreCanneleGood = ++scoreCannele
+
+
+/* question 1 quizz 1*/
+good1.addEventListener('click', function () {
+
+
+    scoreCanneleTexte.innerHTML = scoreCanneleGood;
+    return scoreCanneleGood = ++scoreCannele;
+}
+
+
+
+);
+
+/* question 1 quizz 2*/
+
+const good2 = document.querySelector('.rep2q1-wild');
+good2.addEventListener('click', function () {
+
+
+    scoreCanneleTexte.innerHTML = scoreCanneleGood;
+    return scoreCanneleGood = ++scoreCannele;
+})
+
+
+
+
+
+
+
+
+
 
 
 

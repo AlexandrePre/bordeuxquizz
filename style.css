@@ -295,6 +295,14 @@ h4 {
     height: 10vh;
 }
 
+.scorecannele {
+    font-size: 110%;
+    color: rgb(236, 11, 11);
+    position: absolute;
+    left: 40%;
+    top: 30%;
+}
+
 .macaron {
     position: absolute;
     left: 70%;
@@ -307,6 +315,13 @@ h4 {
     height: 10vh;
 }
 
+.scoremacaron {
+    font-size: 110%;
+    color: rgb(236, 11, 11);
+    position: absolute;
+    left: 45%;
+    top: 20%;
+}
 
 
 

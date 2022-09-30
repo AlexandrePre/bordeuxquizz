@@ -2,42 +2,45 @@
 
 html {
     scroll-behavior: smooth;
-  }
+}
 
 :root {
     --primary: #131734;
     --secondary: #fff;
 }
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 .header {
     width: 100%;
     position: fixed;
     background: var(--primary);
-    
+
 }
 
-.header div{
+.header div {
     height: 10vh;
     display: flex;
     justify-content: center;
 }
 
-.header div a{
+
+.header div a {
     position: absolute;
     left: 3%;
     text-decoration: none;
     color: var(--secondary);
 }
 
-.header ion-icon{
-   font-size:  2em;
+.header ion-icon {
+    font-size: 2em;
 }
 
-.header h3{
+.header h3 {
     color: var(--secondary);
     font-size: clamp(1.4rem, 2vw, 5rem);
     text-align: center;
@@ -52,11 +55,12 @@ html {
     gap: 1em;
     background: var(--primary);
     height: 100vh;
+
     padding-top: 8em;
 }
 
 
-.container a{
+.container a {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -67,7 +71,7 @@ html {
     font-weight: 900;
 }
 
-.container ion-icon{
+.container ion-icon {
     color: var(--secondary);
     font-size: 2.7em;
 }
@@ -91,38 +95,168 @@ html {
     letter-spacing: 0.2em;
     text-align: center;
 }
+
 @keyframes up {
     from {
         transform: translateY(18rem);
     }
+
     to {
         transform: translateY(0);
     }
 }
 
 
-.team {
-    padding-top: 14vh; 
+
+.quizz1 {
+    height: 100vh;
+    margin-top: 3rem;
 
 }
 
-.reglement {
-    border: solid 4px white;
-    width: 18rem;
-    height: 23em;
-    margin: 0 auto;
-    border-radius: 1em;
-    box-shadow:  5px 5px 30px #8b8686,
-             -5px -5px 30px #7a7575;
+.diapo1 {
+    display: grid;
+    height: 70vh;
+    grid-template-rows: 1fr, 1fr, 1fr, 1fr, 1fr, 1fr;
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+    align-items: center;
+    margin: 10px;
+    background-color: antiquewhite;
+    --c: 1em;
+    --nc: calc(100% - var(--c));
+    clip-path: polygon(0 var(--c), var(--c) var(--c), var(--c) 0,
+            var(--nc) 0, var(--nc) var(--c), 100% var(--c),
+            100% var(--nc), var(--nc) var(--nc), var(--nc) 100%,
+            var(--c) 100%, var(--c) var(--nc), 0 var(--nc));
+
+
+}
+
+h2 {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+}
+
+h4 {
+    text-align: center;
+}
+
+.quizz2 {
+    height: 100vh;
+    margin-top: 3rem;
+}
+
+.diapo1-wild {
+    display: grid;
+    height: 70vh;
+    grid-template-rows: 1fr, 1fr, 1fr, 1fr, 1fr, 1fr;
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+    align-items: center;
+    margin: 10px;
+    background-color: antiquewhite;
+    --c: 1em;
+    --nc: calc(100% - var(--c));
+    clip-path: polygon(0 var(--c), var(--c) var(--c), var(--c) 0,
+            var(--nc) 0, var(--nc) var(--c), 100% var(--c),
+            100% var(--nc), var(--nc) var(--nc), var(--nc) 100%,
+            var(--c) 100%, var(--c) var(--nc), 0 var(--nc));
+
+
+
 }
 
 
-.bigContainer{
+
+
+
+.questionMort {
+    height: 100vh;
+    margin-top: 3rem;
+}
+
+.questionfinal {
+    display: grid;
+    height: 70vh;
+    grid-template-rows: 2fr, 1fr, 1fr;
+    grid-template-columns: 1fr, 1fr, fr;
+    row-gap: 2rem;
+    align-items: center;
+    margin: 10px;
+    background-color: antiquewhite;
+    --c: 1em;
+    --nc: calc(100% - var(--c));
+    clip-path: polygon(0 var(--c), var(--c) var(--c), var(--c) 0,
+            var(--nc) 0, var(--nc) var(--c), 100% var(--c),
+            100% var(--nc), var(--nc) var(--nc), var(--nc) 100%,
+            var(--c) 100%, var(--c) var(--nc), 0 var(--nc));
+}
+
+
+.choco {
+    position: absolute;
+    left: 40%;
+
+
+}
+
+.choco img {
+    width: 20vw;
+    height: 20vh;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    background-color: var(--primary);
+    width: 100%;
+    height: 20vw;
+    margin-bottom: 1px;
+}
+
+.cannele {
+    position: absolute;
+    left: 10%;
+
+}
+
+.cannele img {
+
+    width: 20vw;
+    height: 10vh;
+}
+
+.scorecannele {
+    font-size: 110%;
+    color: rgb(236, 11, 11);
+    position: absolute;
+    left: 40%;
+    top: 30%;
+}
+
+.macaron {
+    position: absolute;
+    left: 70%;
+
+}
+
+.container .button {
+    display: flex;
+    height: 100vh;
+}
+
+
+.bigContainer {
     height: 100%;
 }
 
 
-.reglement div{
+.reglement div {
+
     height: 100%;
     padding: 1em;
     border: solid 10px var(--primary);
@@ -130,24 +264,26 @@ html {
     background: rgb(246, 237, 222);
 }
 
-form{
+
+form {
     margin-top: 2em;
     display: flex;
-justify-content: center;
+    justify-content: center;
 }
 
-.containerTeam{
+.containerTeam {
     margin-top: 2em;
     display: flex;
     justify-content: center;
     gap: 2em;
 }
 
-.containerTeam1{
+.containerTeam1 {
     text-align: center;
 }
 
-.containerTeam2{
+
+.containerTeam2 {
     text-align: center;
 }
 
@@ -163,29 +299,35 @@ justify-content: center;
 
 
 @media screen and (min-width: 768px) {
-    .header div{
+    .header div {
         height: 12vh;
     }
-    .header ion-icon{
+
+    .header ion-icon {
         font-size: 3.5em;
     }
-    .header div a{
+
+    .header div a {
         left: 15%;
     }
+
     .container {
         padding-top: initial;
         gap: 10em;
     }
-    .container a{
+
+    .container a {
         font-size: 2.5em;
     }
-    
-    .container ion-icon{
+
+    .container ion-icon {
         font-size: 3em;
     }
-    .containerTitle{
+
+    .containerTitle {
         height: 18em;
     }
+
     .bigContainer {
         display: flex;
         flex-direction: row;
@@ -193,6 +335,7 @@ justify-content: center;
         align-items: center;
         gap: 15em;
     }
+
     .containerTeam {
         display: flex;
         justify-content: center;
@@ -203,12 +346,12 @@ justify-content: center;
 
 }
 
-.modal{
+.modal {
     display: none;
 
 }
 
-.classModal{
+.classModal {
     position: relative;
     top: 50%;
     left: 50%;

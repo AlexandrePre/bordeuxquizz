@@ -5,7 +5,7 @@
   "description": "bordeaux-quizzz",
   "main": "app.js",
   "scripts": {
-      "start": "parcel",
+    "start": "parcel",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,8 +17,10 @@
   "bugs": {
     "url": "https://github.com/AlexandrePre/bordeuxquizz/issues"
   },
+  "type": "commonjs",
   "homepage": "https://github.com/AlexandrePre/bordeuxquizz#readme",
   "devDependencies": {
-    "parcel": "^2.7.0"
+    "parcel": "^2.7.0",
+    "w3c-html-validator": "^1.1.3"
   }
 }

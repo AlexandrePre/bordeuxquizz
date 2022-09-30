@@ -31,9 +31,11 @@ const suivant = document.querySelector('.right');
 const precedent = document.querySelector('.left');
 let count = 0;
 
+
 items[count].style.display = 'block';
 items[count + 1].style.display = 'none';
 items[count + 2].style.display = 'none';
+items[count + 3].style.display = 'none';
 
 function slideSuivante() {
     items[count].style.display = 'none';
@@ -41,7 +43,7 @@ function slideSuivante() {
     if (count < nbSlide - 1) {
         count++;
     } else {
-        count = 0;
+        count = 1;
     }
 
     items[count].style.display = 'block';
@@ -72,5 +74,21 @@ function keyPress(e) {
 }
 document.addEventListener('keydown', keyPress)
 
+// function bonne réponse
 
+const rightAnswer = document.querySelector('.rightAnswer');
+const wrongAnswer = document.querySelector('.wrongAnswer');
+let numberOfPoint = 0;
 
+function addPoint() {
+    numberOfPoint = numberOfPoint + 1;
+    rightAnswer.style.backgroundColor = 'green';
+}
+rightAnswer.addEventListener('click', addPoint);
+
+// fonction mauvaise réponse
+
+function redAnswer() {
+    wrongAnswer.style.backgroundColor = 'red';
+}
+wrongAnswer.addEventListener('click', redAnswer);

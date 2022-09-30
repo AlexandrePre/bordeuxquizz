@@ -6,13 +6,30 @@ const questionMort = document.querySelector(".questionMort");
 const container = document.querySelector('.container');
 const footer = document.querySelector('.footer')
 const quizz1 = document.querySelector('.quizz1');
-const team = document.querySelector('containerTeam1');
+const bigContainer = document.querySelector('.bigContainer');
 
 
 header.style.display = 'none';
 footer.style.display = 'none';
 
-/* fonction for scrool */
+/* fonction for scrool pour header */
+
+window.addEventListener('scroll', () => {
+
+    const { scrollTop, clientHeight } = document.documentElement;
+
+    const topContainerToTopViewport = quizz1.getBoundingClientRect().top;
+
+    if (scrollTop > topContainerToTopViewport) {
+        header.style.display = 'block';
+
+    } else {
+        header.style.display = 'none';
+
+    }
+});
+
+/* fonction for scrool pour footer */
 
 window.addEventListener('scroll', () => {
 
@@ -21,14 +38,15 @@ window.addEventListener('scroll', () => {
     const topContainerToTopViewport = quizz1.getBoundingClientRect().bottom;
 
     if (scrollTop > topContainerToTopViewport) {
-        header.style.display = 'block';
         footer.style.display = 'block';
+
     } else {
-        header.style.display = 'none';
         footer.style.display = 'none';
 
     }
 });
+
+
 
 /* create variable for rep good team cannele */
 

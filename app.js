@@ -11,6 +11,8 @@ const team = document.getElementsByClassName("team");
 
 /* fonction for scrool pour header */
 
+header.style.display = 'none';
+
 
 window.addEventListener('scroll', () => {
     const { scrollTop, clientHeight } = document.documentElement;
@@ -28,6 +30,8 @@ window.addEventListener('scroll', () => {
 
 /* fonction for scrool pour footer */
 
+footer.style.display = 'none';
+
 window.addEventListener('scroll', () => {
     const { scrollTop, clientHeight } = document.documentElement;
 
@@ -44,40 +48,40 @@ window.addEventListener('scroll', () => {
 
 
 
-
-/* create variable for rep good team cannele */
+/* comptage de point et good and false */
 
 const scoreCanneleTexte = document.querySelector('.scorecannele');
 const scoreMacaronTexte = document.querySelector('.scoremacaron');
 
-const good1 = document.querySelector('.rep1q1');
+const answer = document.getElementsByClassName('answer');
+const answerNice = document.getElementsByClassName('answerGood')
+
+console.log(answerNice);
 
 
 let scoreCannele = 0;
 let scoreCanneleGood = ++scoreCannele
 
+for (const answerGood of answerNice) {
+    answerGood.addEventListener('click', () => {
 
-/* question 1 quizz 1*/
-good1.addEventListener('click', function () {
+        answerGood.style.backgroundColor = "green"
+        scoreCanneleTexte.innerHTML = scoreCanneleGood;
+        return scoreCanneleGood = ++scoreCannele;
 
 
-    scoreCanneleTexte.innerHTML = scoreCanneleGood;
-    return scoreCanneleGood = ++scoreCannele;
+    }
+    );
 }
 
+for (const answerFalse of answer) {
+    answerFalse.addEventListener('click', () => {
 
+        answerFalse.style.backgroundColor = "red"
 
-);
-
-/* question 1 quizz 2*/
-
-const good2 = document.querySelector('.rep2q1-wild');
-good2.addEventListener('click', function () {
-
-
-    scoreCanneleTexte.innerHTML = scoreCanneleGood;
-    return scoreCanneleGood = ++scoreCannele;
-})
+    }
+    );
+}
 
 
 // formulaire pour rentrer le nom des équipes

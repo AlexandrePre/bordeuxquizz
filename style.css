@@ -182,7 +182,7 @@ header {
     cursor: pointer;
 }
 
-.wrongAnswer::selection {
+.wrongAnswerRed {
     padding: 50px;
     margin: 10px;
     border-radius: 50% 20% / 10% 40%;
@@ -190,11 +190,20 @@ header {
     cursor: pointer;
 }
 
+
 .rightAnswer {
     padding: 50px;
     margin: 10px;
     border-radius: 50% 20% / 10% 40%;
     background-color: rgb(0, 26, 255);
+    cursor: pointer;
+}
+
+.rightAnswerGreen {
+    padding: 50px;
+    margin: 10px;
+    border-radius: 50% 20% / 10% 40%;
+    background-color: rgb(9, 255, 0);
     cursor: pointer;
 }
 

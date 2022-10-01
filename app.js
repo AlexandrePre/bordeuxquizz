@@ -29,38 +29,86 @@ const items = document.querySelectorAll('.question');
 const nbSlide = items.length;
 const suivant = document.querySelector('.right');
 const precedent = document.querySelector('.left');
-let count = 0;
+let slideIndex = 0;
+const answer2 = document.querySelectorAll('h3');
 
 
-items[count].style.display = 'block';
-items[count + 1].style.display = 'none';
-items[count + 2].style.display = 'none';
-items[count + 3].style.display = 'none';
+items[slideIndex].style.display = 'block';
+items[slideIndex + 1].style.display = 'none';
+items[slideIndex + 2].style.display = 'none';
+items[slideIndex + 3].style.display = 'none';
+items[slideIndex + 4].style.display = 'none';
 
 function slideSuivante() {
-    items[count].style.display = 'none';
+    items[slideIndex].style.display = 'none';
 
-    if (count < nbSlide - 1) {
-        count++;
+    if (slideIndex < nbSlide - 1) {
+        slideIndex++;
     } else {
-        count = 1;
+        slideIndex = 1;
     }
 
-    items[count].style.display = 'block';
+    items[slideIndex].style.display = 'block';
+
+    // remise à zéro des classes bonne et mauvaise réponse
+
+
+    function testAnswer2() {
+
+        for (let i = 0; i < answer2.length; i++) {
+
+            const testAnswer2 = answer2[i].className;
+
+            if (testAnswer2 == 'wrongAnswerRed') {
+                answer2[i].className = "wrongAnswer";
+            }
+            if (testAnswer2 == 'rightAnswerGreen') {
+                answer2[i].className = "rightAnswer";
+            }
+        }
+    }
+
+    testAnswer2();
+    console.log(answer2);
+
 }
 suivant.addEventListener('click', slideSuivante);
 
 function slidePrecedente() {
-    items[count].style.display = 'none';
+    items[slideIndex].style.display = 'none';
 
-    if (count > 0) {
-        count--;
+    if (slideIndex > 1) {
+        slideIndex--;
     } else {
-        count = nbSlide - 1;
+        slideIndex = nbSlide - 1;
     }
 
-    items[count].style.display = 'block';
+    items[slideIndex].style.display = 'block';
+
+    // remise à zéro des classes bonne et mauvaise réponse
+
+
+
+
+    function testAnswer2() {
+
+        for (let i = 0; i < answer2.length; i++) {
+
+            const testAnswer2 = answer2[i].className;
+
+            if (testAnswer2 == 'wrongAnswerRed') {
+                answer2[i].className = "wrongAnswer";
+            }
+            if (testAnswer2 == 'rightAnswerGreen') {
+                answer2[i].className = "rightAnswer";
+            }
+        }
+    }
+
+    testAnswer2();
+    console.log(answer2);
 }
+
 precedent.addEventListener('click', slidePrecedente);
 
 function keyPress(e) {
@@ -74,21 +122,26 @@ function keyPress(e) {
 }
 document.addEventListener('keydown', keyPress)
 
-// function bonne réponse
+// function background color change
 
-const rightAnswer = document.querySelector('.rightAnswer');
-const wrongAnswer = document.querySelector('.wrongAnswer');
-let numberOfPoint = 0;
+const answer = document.querySelectorAll('h3');
+console.log(answer);
 
-function addPoint() {
-    numberOfPoint = numberOfPoint + 1;
-    rightAnswer.style.backgroundColor = 'green';
+
+for (let i = 0; i < answer.length; i++) {
+
+    function testAnswer() {
+        const testAnswer = answer[i].className;
+
+        if (testAnswer == 'wrongAnswer') {
+            answer[i].className = "wrongAnswerRed";
+        }
+        if (testAnswer == 'rightAnswer') {
+            answer[i].className = "rightAnswerGreen";
+        }
+    }
+
+    answer[i].addEventListener('click', testAnswer);
 }
-rightAnswer.addEventListener('click', addPoint);
 
-// fonction mauvaise réponse
 
-function redAnswer() {
-    wrongAnswer.style.backgroundColor = 'red';
-}
-wrongAnswer.addEventListener('click', redAnswer);

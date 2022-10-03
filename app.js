@@ -6,7 +6,7 @@ const questionMort = document.querySelector(".questionMort");
 const container = document.querySelector('.container');
 const footer = document.querySelector('.footer');
 const quizz1 = document.querySelector('.quizz1');
-const team = document.getElementsByClassName("team");
+const team = document.getElementsByClassName(".team");
 
 
 /* fonction for scrool pour header */

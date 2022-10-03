@@ -7,23 +7,32 @@ html {
 :root {
     --primary: #131734;
     --secondary: #fff;
+    --rois: #f4f6ed;
 }
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+/* header */
+
 .header {
     width: 100%;
-    position: fixed;
     background: var(--primary);
-    
+    display: none;
+}
+
+.header.scroll{
+    display: block;
+    position: fixed;
 }
 
 .header div{
     height: 10vh;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .header div a{
@@ -43,7 +52,7 @@ html {
     text-align: center;
 }
 
-
+/* home page */
 .container {
     display: flex;
     flex-direction: column;
@@ -100,67 +109,120 @@ html {
     }
 }
 
-
+/* choose team */
 .team {
-    padding-top: 14vh; 
-
+    padding-top: 20vh;
+    height: auto; 
 }
-
-.reglement {
-    border: solid 4px white;
-    width: 18rem;
-    height: 23em;
-    margin: 0 auto;
-    border-radius: 1em;
-    box-shadow:  5px 5px 30px #8b8686,
-             -5px -5px 30px #7a7575;
-}
-
 
 .bigContainer{
-    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10em;
 }
-
+.reglement {
+    box-shadow:  10px 10px 25px 10px rgba(0, 0, 0, 0.361);
+    border: 3px solid rgba(255, 255, 255, 0.724);
+    background: #f4f6ed;
+    width: 18rem;
+    height: 23em;
+    border-radius: 1em;
+}
 
 .reglement div{
     height: 100%;
     padding: 1em;
-    border: solid 10px var(--primary);
     border-radius: 1em;
-    background: rgb(246, 237, 222);
 }
 
-form{
-    margin-top: 2em;
+.containerForm{
+    width: 18rem;
+    height: 23em;
+    background: var(--rois);
+    border-radius: 1em;
+    box-shadow:  10px 10px 25px 10px rgba(0, 0, 0, 0.361);
+    border: 3px solid rgba(255, 255, 255, 0.724);
+    
+}
+
+.form{
+    height: 100%;
+    width: 100%;
+    border-radius: 1em;
+}
+
+.form h2{
+    position: relative;
     display: flex;
-justify-content: center;
+    justify-content: center;
+    margin-top: 1.5em;
+    margin-bottom: 2em;
+    color: #131734;
+}
+
+.form h2::before{
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    width: 4em;
+    height: 0.12em;
+    background: #131734;
+}
+
+.inputBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inputBox input{
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    outline: none;
+    padding: 10px 70px 10px 20px;
+    border-radius: 0.6em;
+    box-shadow:  5px 5px 20px 2px rgba(0, 0, 0, 0.361);
+    border: 1px solid rgba(255, 255, 255, 0.724);
+    font-size: 1em;
+    margin-top: 1em;
+}
+
+.inputBox button{
+    width: 5em;
+    margin: 1em;
+    border: none;
+    background: var(--primary);
+    padding: 0.5em;
+    border-radius: 0.5em;
+    cursor: pointer;
+    color: var(--secondary);
 }
 
 .containerTeam{
-    margin-top: 2em;
+    width: 18rem;
+    height: 23em;
+    background: var(--rois);
+    border-radius: 1em;
+    box-shadow:  10px 10px 25px 10px rgba(0, 0, 0, 0.361);
+    border: 3px solid rgba(255, 255, 255, 0.724);
+}
+
+.boxTeam{
+    height: 100%;
+    width: 100%;
+    border-radius: 1em;
+}
+
+.boxTeam h2{
     display: flex;
     justify-content: center;
-    gap: 2em;
+    margin-top: 1.5em;
+    margin-bottom: 2em;
+    color: #131734;
 }
-
-.containerTeam1{
-    text-align: center;
-}
-
-.containerTeam2{
-    text-align: center;
-}
-
-.containerTeam1 img {
-    margin-top: 1em;
-    width: 4em;
-}
-
-.containerTeam2 img {
-    margin-top: 1em;
-    width: 5em;
-}
-
 
 @media screen and (min-width: 768px) {
     .header div{
@@ -186,32 +248,37 @@ justify-content: center;
     .containerTitle{
         height: 18em;
     }
-    .bigContainer {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 15em;
+    .team{
+        padding-top: 17vh;
+        height: 100vh;
     }
-    .containerTeam {
-        display: flex;
-        justify-content: center;
-        gap: 10em;
+    .bigContainer{
         flex-direction: row;
+        gap: 2em;
     }
-
-
 }
 
 .modal{
     display: none;
-
+    position: absolute;
+    top: center;
+    left: center;
 }
 
 .classModal{
-    position: relative;
-    top: 50%;
-    left: 50%;
+    
     border: black solid 1px;
     padding: 2em;
+    background: #fff;
+}
+
+.footer {
+    background: #131734;
+    display: none;
+    bottom: 0;
+}
+
+.footer.scroll1{
+    display: block;
+    position: fixed;
 }

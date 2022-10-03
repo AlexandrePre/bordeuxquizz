@@ -1,3 +1,29 @@
+// scroll header
+const header = document.querySelector(".header");
+const container = document.querySelector(".container");
+let height = container.clientHeight;
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY > height - 5) {
+        header.classList.add("scroll");
+    } else {
+        header.classList.remove("scroll");
+    }
+});
+
+//scroll footer
+const team = document.querySelector(".team");
+const footer = document.querySelector(".footer");
+let height1 = team.clientHeight;
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY > height1 - 2) {
+        footer.classList.add("scroll1");
+    } else {
+        footer.classList.remove("scroll1");
+    }
+});
+
 
 
 // formulaire pour rentrer le nom des équipes
@@ -5,42 +31,48 @@ const btn1 = document.getElementById("btn1");
 const btn2 = document.getElementById("btn2");
 const team1 = document.getElementById("team1");
 const team2 = document.getElementById("team2");
+const text1 = document.getElementById("text1");
+const text2 = document.getElementById("text2");
 
-btn1.addEventListener('click', () =>{
-    const text1 = document.getElementById("text1").value;
-    team1.innerHTML = text1 ;
+btn1.addEventListener('click', () => {
+    team1.innerHTML = text1.value;
+    text1.value = "";  
 });
 
-btn2.addEventListener('click', () =>{
-    const text2 = document.getElementById("text2").value;
-    team2.innerHTML = text2;
+btn2.addEventListener('click', () => {
+    team2.innerHTML = text2.value;
+    text2.value = "";
 });
 
-// empèche de reload
+// open modal
+const btnWin = document.getElementById("btnWin");
+btnWin.addEventListener("click",  () => {
+const random = Math.floor(Math.random() * 100) + 1;
+const modal = document.getElementById("modal");
+const teamWin = document.getElementById("teamWin");
+
+ 
+
+    if (random < 50) { 
+        ((modal.style.display = "flex") && (teamWin.innerHTML = team1.innerHTML));
+        } else { ((modal.style.display = "flex") && (teamWin.innerHTML = team2.innerHTML)) };
+    
+    btnWin.onsubmit = function (event) {
+        event.preventDefault();
+    };
+
+    });
+
+
 const form = document.getElementById("form");
 form.onsubmit = function (event) {
   event.preventDefault();
 };
 
-// open modal
-const btnWin = document.getElementById("btnWin");
-btnWin.addEventListener("click",  () => {
+// empèche de reload
 
 
-const random = Math.floor(Math.random() * 100) + 1;
-const modal = document.getElementById("modal");
-const teamWin = document.getElementById("teamWin");
-const text1 = document.getElementById("text1").value;
-const text2 = document.getElementById("text2").value;
-            
-    if (random < 50) {
-        ((modal.style.display = "flex") && (teamWin.innerHTML = text1));
-        } else { ((modal.style.display = "flex") && (teamWin.innerHTML = text2)) };
-    });
 
-btnWin.onsubmit = function (event) {
-event.preventDefault();
-};
 
 // close modal    
 const btnClose = document.getElementById("btnClose");
@@ -53,6 +85,5 @@ btnClose.addEventListener("click", () => {
 btnClose.onsubmit = function (event) {
   event.preventDefault();
 };
-
 
 

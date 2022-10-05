@@ -1,27 +1,73 @@
-
-const header = document.querySelector(".header");
-
+/* eslint-disable no-unused-expressions */
+/* eslint-disable func-names */
+// scroll header
+const header = document.querySelector('.header');
 const container = document.querySelector('.container');
-
-const footer = document.querySelector("h3");
-
-const quizz1 = document.querySelector('.quizz1');
-
-
-header.style.display = 'none';
-footer.style.display = 'none';
-
+const height = container.clientHeight;
 window.addEventListener('scroll', () => {
-    const { scrollTop, clientHeight } = document.documentElement;
-    const topContainerToTopViewport = quizz1.getBoundingClientRect().top;
-    if (scrollTop > topContainerToTopViewport.toFixed()) {
-        header.style.display = 'block';
-        footer.style.display = 'block';
+    if (window.scrollY > height - 5) {
+        header.classList.add('scroll');
     } else {
-        header.style.display = 'none';
-        footer.style.display = 'none';
+        header.classList.remove('scroll');
     }
 });
+
+// scroll footer
+const team = document.querySelector('.team');
+const footer = document.querySelector('.footer');
+const height1 = team.clientHeight;
+window.addEventListener('scroll', () => {
+    if (window.scrollY > height1 + 2222) {
+        footer.classList.add('scroll1');
+    } else {
+        footer.classList.remove('scroll1');
+    }
+});
+
+// formulaire pour rentrer le nom des equipe
+const btn1 = document.getElementById('btn1');
+const btn2 = document.getElementById('btn2');
+const team1 = document.getElementById('team1');
+const team2 = document.getElementById('team2');
+const text1 = document.getElementById('text1');
+const text2 = document.getElementById('text2');
+btn1.addEventListener('click', () => {
+    team1.innerHTML = text1.value;
+    text1.value = '';
+});
+btn2.addEventListener('click', () => {
+    team2.innerHTML = text2.value;
+    text2.value = '';
+});
+
+// open modal
+const btnWin = document.getElementById('btnWin');
+btnWin.addEventListener('click', () => {
+    const random = Math.floor(Math.random() * 100) + 1;
+    const modal = document.getElementById('modal');
+    const teamWin = document.getElementById('teamWin');
+    if (random < 50) {
+        ((modal.style.display = 'flex') && (teamWin.innerHTML = team1.innerHTML));
+    } else { ((modal.style.display = 'flex') && (teamWin.innerHTML = team2.innerHTML)); }
+
+    btnWin.onsubmit = function (event) {
+        event.preventDefault();
+    };
+});
+const form = document.getElementById('form');
+form.onsubmit = function (event) {
+    event.preventDefault();
+};
+
+// close modal
+const btnClose = document.getElementById('btnClose');
+const modal = document.getElementById('modal');
+btnClose.addEventListener('click', () => {
+    modal.style.display = 'none';
+});
+btnClose.onsubmit = function (event) {
+    event.preventDefault();
+};
 
 // slide horizontal
 
@@ -120,24 +166,33 @@ document.addEventListener('keydown', keyPress)
 
 // function background color change
 
-const answer = document.querySelectorAll('h3');
-console.log(answer);
+const scoreCanneleTexte = document.querySelector('.scorecannele');
+const scoreMacaronTexte = document.querySelector('.scoremacaron');
 
+let scoreCannele = 0;
+let scoreMacaron = 0;
 
-for (let i = 0; i < answer.length; i++) {
+for (let i = 0; i < answer2.length; i++) {
 
     function testAnswer() {
-        const testAnswer = answer[i].className;
+        const testAnswer = answer2[i].className;
 
         if (testAnswer == 'wrongAnswer') {
-            answer[i].className = "wrongAnswerRed";
+            answer2[i].className = "wrongAnswerRed";
         }
         if (testAnswer == 'rightAnswer') {
-            answer[i].className = "rightAnswerGreen";
+            answer2[i].className = "rightAnswerGreen";
+            if (slideIndex % 2 == 0) {
+                scoreCannele++;
+                console.log("cannele" + scoreCannele);
+                scoreCanneleTexte.innerHTML = scoreCannele;
+            } else scoreMacaron++
+            console.log("macaron" + scoreMacaron);
+            scoreMacaronTexte.innerHTML = scoreMacaron;
         }
     }
 
-    answer[i].addEventListener('click', testAnswer);
+    answer2[i].addEventListener('click', testAnswer);
 }
 
 

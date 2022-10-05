@@ -115,12 +115,12 @@ html {
 
 
 
-.quizz1 {
+/* .quizz1 {
     height: 300em;
     margin-top: 3rem;
     grid-row-start: 4;
     grid-row-end: 5;
-}
+} */
 
 .diapo1 {
     display: grid;
@@ -273,6 +273,7 @@ h4 {
     border-radius: 1em;
 }
 
+
 .containerCard {
     height: 100%;
     padding: 1em;
@@ -286,7 +287,9 @@ h4 {
 
 .containerCard:nth-child(1) h2 {
     text-align: center;
+    /* padding: 50px; */
 }
+
 
 
 .form h2 {
@@ -343,6 +346,95 @@ h4 {
     margin-top: 1.5em;
     margin-bottom: 2em;
     color: #131734;
+}
+
+/* slide */
+
+.quizz1 {
+    height: 150em;
+    padding: 50px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(255, 0, 0);
+}
+
+
+.question {
+    max-width: 100%;
+    /* display: none; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.stringQuestion {
+    border-radius: 50% 20% / 10% 40%;
+    background-color: rgb(228, 19, 200);
+    padding: 10px;
+    margin: 10px;
+}
+
+.fullAnswer {
+    display: grid;
+    /* align-items: center; */
+    /* justify-content: center;
+    flex-direction: column; */
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    /* grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr; */
+    border: 1px solid rgb(0, 252, 13);
+    text-align: center;
+}
+
+.wrongAnswer {
+    padding: 50px;
+    margin: 10px;
+    border-radius: 50% 20% / 10% 40%;
+    background-color: rgb(0, 26, 255);
+    cursor: pointer;
+}
+
+.wrongAnswerRed {
+    padding: 50px;
+    margin: 10px;
+    border-radius: 50% 20% / 10% 40%;
+    background-color: rgb(255, 0, 0);
+    cursor: pointer;
+}
+
+.rightAnswer {
+    padding: 50px;
+    margin: 10px;
+    border-radius: 50% 20% / 10% 40%;
+    background-color: rgb(0, 26, 255);
+    cursor: pointer;
+}
+
+.rightAnswerGreen {
+    padding: 50px;
+    margin: 10px;
+    border-radius: 50% 20% / 10% 40%;
+    background-color: rgb(9, 255, 0);
+    cursor: pointer;
+}
+
+.cont-btn {
+    width: 50%;
+    height: auto;
+    border: 1px solid #000;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+}
+
+.btn-nav {
+    font-size: 50px;
+    margin: 0 15px;
+    cursor: pointer;
 }
 
 @media screen and (min-width: 768px) {
@@ -502,4 +594,35 @@ h4 {
 #btnWin:active {
     transform: translateY(3px);
     box-shadow: 0 5px #212967;
+}
+
+/* slide */
+/* media screen */
+.fullAnswer {
+    display: grid;
+    /* align-items: center; */
+    /* justify-content: center;
+        flex-direction: column; */
+    /* grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr); */
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    border: 1px solid rgb(0, 252, 13);
+    text-align: center;
+}
+
+/* media screen */
+.wrongAnswer {
+    padding: 50px;
+    margin: 10px;
+    border-radius: 50% 20% / 10% 40%;
+    background-color: rgb(0, 26, 255);
+}
+
+/* media screen */
+.rightAnswer {
+    padding: 50px;
+    margin: 10px;
+    border-radius: 50% 20% / 10% 40%;
+    background-color: rgb(0, 26, 255);
 }

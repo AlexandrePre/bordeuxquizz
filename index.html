@@ -1,194 +1,47 @@
-<!DOCTYPE html>
-<html lang="fr">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<header class="header">
-    <div>
-        <img src="/assets/cannelé noir et blanc.png" alt="">
+<section class="quizz1">
+    <div class="slider">
+        <div class="question">
+            <h2 class="stringQuestion">Prêt pour la première question ?</h2>
+        </div>
+        <div class="question">
+            <h2 class="stringQuestion">Quel est le nom du formateur JS ?</h2>
+            <div class="fullAnswer">
+                <h3 class="wrongAnswer">David Ginola</h3>
+                <h3 class="wrongAnswer">Jean-Louis David</h3>
+                <h3 class="wrongAnswer">David Faible</h3>
+                <h3 class="rightAnswer">David Faure</h3>
+            </div>
+        </div>
+        <div class="question">
+            <h2 class="stringQuestion">Quel est le nom du formateur PHP ?</h2>
+            <div class="fullAnswer">
+                <h3 class="wrongAnswer">Jean le Géant</h3>
+                <h3 class="rightAnswer">Jean le Grand</h3>
+                <h3 class="wrongAnswer">Jean le Petit</h3>
+                <h3 class="wrongAnswer">Jean le Nain</h3>
+            </div>
+        </div>
+        <div class="question">
+            <h2 class="stringQuestion">Quel est le nom de l'équipe de rugby de Bordeaux ?</h2>
+            <div class="fullAnswer">
+                <h3 class="wrongAnswer">UGC</h3>
+                <h3 class="rightAnswer">UBB</h3>
+                <h3 class="wrongAnswer">UBER</h3>
+                <h3 class="wrongAnswer">GIT HUB</h3>
+            </div>
+        </div>
+        <div class="question">
+            <h2 class="stringQuestion">Quelle porte est connue à Bordeaux ?</h2>
+            <div class="fullAnswer">
+                <h3 class="wrongAnswer">Porte d'Alsace</h3>
+                <h3 class="wrongAnswer">Porte de Gironde</h3>
+                <h3 class="rightAnswer">Porte de Bourgogne</h3>
+                <h3 class="wrongAnswer">Porte des toilettes</h3>
+            </div>
+        </div>
     </div>
-</header>
 
-<body>
-
-
-
-    <header class="header">
-        <div>
-            <a href="">
-                <ion-icon name="refresh-circle-outline"></ion-icon>
-            </a>
-            <h3>Bordeaux <br> Quizzzz</h3>
-
-        </div>
-    </header>
-
-    <section class="container">
-        <div class="containerTitle">
-            <h1 class="bigTitle">Bordeaux <br> Quizzzz</h1>
-        </div>
-        <div><a href="#ancrePlay">
-                <ion-icon name="play"></ion-icon>PLAY
-            </a></div>
-    </section>
-
-
-
-    <section class="team" id="ancrePlay">
-        <div class="bigContainer">
-            <div class="reglement">
-                <div>
-                    <h2>Réglement</h2>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi iusto esse a, maxime dicta
-                        impedit
-                        facere, sunt nihil adipisci corrupti architecto! Placeat harum ratione minus vel aspernatur
-                        tenetur sit quis?</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque vel recusandae saepe excepturi
-                        placeat eveniet totam distinctio nam aspernatur, quae nulla nesciunt. Vel adipisci aliquam
-                        modi
-                        nostrum excepturi magnam? Eius.</p>
-                </div>
-            </div>
-        </div>
-
-        <form id="form" action="">
-            <input type="text" id="text1" placeholder="team?" value="">
-            <button id="btn1">OK</button>
-            <input type="text" id="text2" placeholder="team?" value="">
-            <button id="btn2">ok</button>
-        </form>
-
-        <div class="containerTeam">
-            <div class="containerTeam1">
-                <h4 id="team1"></h4>
-                <img src="/assets/cannelenoiretblanc.png" alt="">
-            </div>
-            <div class="containerTeam2">
-                <h4 id="team2"></h4>
-                <img src="/assets/Logomacaronnoiretblanc.png" alt="macaron">
-            </div>
-        </div>
-        <button id="btnWin">Qui commence?</button>
-        <div class="modal" id="modal">
-            <div class="classModal">
-                <h3 id="teamWin"></h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis, earum corporis incidunt
-                    aliquid, rerum cumque dolorem iste obcaecati laborum natus consequatur!</p>
-                <button id="btnClose">close</button>
-            </div>
-        </div>
-
-        <h2>Réglement</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis tempora amet, rerum officia non
-            iste quaerat, natus earum illum alias ex optio possimus incidunt. Cupiditate eaque similique
-            inventore odio, est sit quaerat voluptatem laudantium voluptas sed, dicta omnis dolores dolore
-            corporis labore reiciendis in harum! Enim soluta optio blanditiis sint.</p>
-        </div>
-
-        <div class="containerTeam">
-            <div class="containerTeam1">
-                <input type="text">
-                <h2>Equipe 1</h2>
-                <p>1</p>
-                <button>Lancez les dès</button>
-                <img src="/assets/cannelé noir et blanc.png" alt="cannelé">
-            </div>
-            <div class="containerTeam2">
-                <input type="text">
-                <h2>Equipe 2</h2>
-                <p>2</p>
-                <button>lancez les dès</button>
-                <img src="/assets/Logo macaron noir et blanc.png" alt="macaron">
-            </div>
-        </div>
-
-        </div>
-    </section>
-
-
-    <section class="quizz1">
-        <div class="Question bordeaux">
-
-        </div>
-        <div class="diapo1">
-            <div class="question1">
-                <h2>Question 1 : comment se nomme l'équipe de rugby de TOP14 de bordeaux</h2>
-            </div>
-
-            <div class="rep1q1">
-                <h3> l'UBB</h3>
-            </div>
-            <div class="rep2q1">
-                <h3> le CABBG</h3>
-            </div>
-            <div class="rep3q1">
-                <h3> le Stade bordelais</h3>
-            </div>
-            <div class="rep4q1">
-                <h3> l'UBT</h3>
-            </div>
-        </div>
-
-
-
-        <button class="button">Suivant</button>
-    </section>
-
-
-
-
-
-
-    <section class="questionMort">
-
-        <div class="questionfinal">
-
-
-            <div class="choco">
-                <img src="assets/Chocolatine-scaled.jpg" alt="chocolatine">
-            </div>
-
-            <div>
-                <h4> UNE CHOCOLATINE</h4>
-            </div>
-
-            <div>
-                <h4> UN PAIN AU CHOCOLAT</h4>
-            </div>
-
-        </div>
-
-
-    </section>
-
-    <footer>
-        <div class="footer">
-            <div class="cannele">
-                <img src="/assets/cannelenoiretblanc.png" alt="cannelé">
-                <h5 class="scorecannele">
-                    0 </h5>
-            </div>
-            <div class="macaron">
-                <img src="/assets/Logomacaronnoiretblanc.png" alt="macaron">
-                <h5 class="scoremacaron">
-                    0 </h5>
-            </div>
-        </div>
-    </footer>
-
-    <script src="app.js"></script>
-
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
-</body>
-
-
-</html>
+    <div class="cont-btn">
+        <div class="btn-nav left">←</div>
+        <div class="btn-nav right">→</div>
+    </div>

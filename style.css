@@ -118,12 +118,12 @@ html {
 .bigContainer{
     width: 100%;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     gap: 10em;
 }
-.reglement {
+.card {
     box-shadow:  10px 10px 25px 10px rgba(0, 0, 0, 0.361);
     border: 3px solid rgba(255, 255, 255, 0.724);
     background: #f4f6ed;
@@ -132,27 +132,21 @@ html {
     border-radius: 1em;
 }
 
-.reglement div{
+.containerCard{
     height: 100%;
     padding: 1em;
+    padding-top: 2em;
     border-radius: 1em;
 }
 
-.containerForm{
-    width: 18rem;
-    height: 23em;
-    background: var(--rois);
-    border-radius: 1em;
-    box-shadow:  10px 10px 25px 10px rgba(0, 0, 0, 0.361);
-    border: 3px solid rgba(255, 255, 255, 0.724);
-    
+.containerCard:nth-child(1) p{
+    text-align: justify;
 }
 
-.form{
-    height: 100%;
-    width: 100%;
-    border-radius: 1em;
+.containerCard:nth-child(1) h2{
+    text-align: center;
 }
+
 
 .form h2{
     position: relative;
@@ -176,6 +170,7 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 1.5em;
 }
 
 .inputBox input{
@@ -199,21 +194,6 @@ html {
     border-radius: 0.5em;
     cursor: pointer;
     color: var(--secondary);
-}
-
-.containerTeam{
-    width: 18rem;
-    height: 23em;
-    background: var(--rois);
-    border-radius: 1em;
-    box-shadow:  10px 10px 25px 10px rgba(0, 0, 0, 0.361);
-    border: 3px solid rgba(255, 255, 255, 0.724);
-}
-
-.boxTeam{
-    height: 100%;
-    width: 100%;
-    border-radius: 1em;
 }
 
 .boxTeam h2{
@@ -249,11 +229,10 @@ html {
         height: 18em;
     }
     .team{
-        padding-top: 17vh;
+        padding-top: 24vh;
         height: 100vh;
     }
     .bigContainer{
-        flex-direction: row;
         gap: 2em;
     }
 }
@@ -266,10 +245,13 @@ html {
 }
 
 .classModal{
-    
     border: black solid 1px;
     padding: 2em;
     background: #fff;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .footer {
@@ -281,4 +263,65 @@ html {
 .footer.scroll1{
     display: block;
     position: fixed;
+}
+
+.classModal h3{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-size: 2em;
+}
+
+.classModal img{
+    width: 25rem;
+}
+
+#btnClose{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: none;
+    border: solid 1px black;
+    border-radius: 0.5em;
+    background: var(--primary);
+    width: 12rem;
+    height: 3rem;
+    color: white;
+    font-size: 2.5em;
+    box-shadow: 0 10px #303c91;
+    padding: 0.6em;
+}
+
+#btnClose:hover{
+    transform: translateY(5px);
+    box-shadow: 0 5px #212967;
+}
+
+#btnClose:active{
+    transform: translateY(8px);
+    box-shadow: 0 4px #212967;
+}
+
+#btnWin{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    text-align: center;
+    margin-top: 2em;
+    border: none;
+    background: none;
+    border: solid 1px black;
+    border-radius: 0.5em;
+    background: var(--primary);
+    width: 15rem;   
+    height: 3rem;
+    color: white;   
+    font-size: 1.5em;
+    box-shadow: 0 8px #010311;
+    padding: 0.6em;
+}
+
+#btnWin:active{
+    transform: translateY(3px);
+    box-shadow: 0 5px #212967;
 }

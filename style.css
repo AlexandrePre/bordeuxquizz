@@ -54,6 +54,13 @@ html {
 }
 
 /* home page */
+
+
+.boxForm {
+    gap: 5em;
+}
+
+
 .container {
     display: flex;
     flex-direction: column;
@@ -115,13 +122,6 @@ html {
 
 
 
-/* .quizz1 {
-    height: 300em;
-    margin-top: 3rem;
-    grid-row-start: 4;
-    grid-row-end: 5;
-} */
-
 .diapo1 {
     display: grid;
     height: 70vh;
@@ -176,19 +176,25 @@ h4 {
 .questionMort {
     height: 100vh;
     margin-top: 3rem;
-    grid-row-start: 5;
-    grid-row-end: 6;
+
 }
 
 .questionfinal {
     display: grid;
     height: 70vh;
-    grid-template-rows: 2fr, 1fr, 1fr;
-    grid-template-columns: 1fr, 1fr, fr;
+    grid-template-rows: 1fr, 1fr, 1fr;
+    grid-template-columns: 1fr, 1fr, 1fr;
     row-gap: 2rem;
     align-items: center;
     margin: 10px;
     background-color: antiquewhite;
+    box-shadow: 10px 10px 25px 10px rgba(0, 0, 0, 0.361);
+    border: 3px solid rgba(255, 255, 255, 0.724);
+    background: #f4f6ed;
+    width: 18em;
+    height: 28em;
+    border-radius: 1em;
+
 
 
 
@@ -196,13 +202,14 @@ h4 {
 
 
 .choco {
-    position: absolute;
-    left: 40%;
+    display: flex;
+    justify-content: center;
 
 
 }
 
 .choco img {
+
     width: 20vw;
     height: 20vh;
 }
@@ -214,7 +221,11 @@ h4 {
     height: 100vh;
 }
 
-
+.logoCompteur {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
 
 .cannele img {
 
@@ -226,7 +237,7 @@ h4 {
     font-size: 110%;
     color: rgb(236, 11, 11);
     position: absolute;
-    left: 40%;
+    left: 23%;
     top: 30%;
 }
 
@@ -235,14 +246,14 @@ h4 {
 .macaron img {
 
     width: 20vw;
-    height: 10vh;
+    height: 8vh;
 }
 
 .scoremacaron {
     font-size: 110%;
     color: rgb(236, 11, 11);
     position: absolute;
-    left: 45%;
+    left: 73%;
     top: 20%;
 }
 
@@ -252,7 +263,7 @@ h4 {
 /* choose team */
 .team {
     padding-top: 20vh;
-    height: auto;
+
 }
 
 .bigContainer {
@@ -261,7 +272,7 @@ h4 {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 10em;
+    gap: 8em;
 }
 
 .card {
@@ -269,15 +280,15 @@ h4 {
     border: 3px solid rgba(255, 255, 255, 0.724);
     background: #f4f6ed;
     width: 18rem;
-    height: 23em;
+    height: 28em;
     border-radius: 1em;
 }
+
 
 
 .containerCard {
     height: 100%;
     padding: 1em;
-    padding-top: 2em;
     border-radius: 1em;
 }
 
@@ -314,7 +325,7 @@ h4 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 1.5em;
+
 }
 
 .inputBox input {
@@ -351,7 +362,7 @@ h4 {
 /* slide */
 
 .quizz1 {
-    height: 150em;
+    height: 70vh;
     padding: 50px;
     align-items: center;
     display: flex;
@@ -362,6 +373,7 @@ h4 {
 
 .question {
     max-width: 100%;
+    height: 70vh;
     /* display: none; */
     display: flex;
     align-items: center;
@@ -379,6 +391,7 @@ h4 {
 
 .fullAnswer {
     display: grid;
+    height: 70vh;
     /* align-items: center; */
     /* justify-content: center;
     flex-direction: column; */
@@ -437,6 +450,107 @@ h4 {
     cursor: pointer;
 }
 
+.footer {
+    background: #131734;
+    display: none;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer.scroll1 {
+    display: block;
+    position: fixed;
+    width: 100%;
+    background-color: #131734;
+}
+
+
+
+.modal {
+    display: none;
+    position: absolute;
+    top: 210%;
+    left: center;
+}
+
+.classModal {
+    border: black solid 1px;
+    padding: 2em;
+    background: #fff;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.classModal h3 {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-size: 1em;
+}
+
+.classModal img {
+    width: 10em;
+}
+
+#btnClose {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: none;
+    border: solid 1px black;
+    border-radius: 0.5em;
+    background: var(--primary);
+    width: 3rem;
+    height: 2rem;
+    color: white;
+    font-size: 1em;
+    box-shadow: 0 6px #303c91;
+    padding: 0.6em;
+}
+
+#btnClose:hover {
+    transform: translateY(5px);
+    box-shadow: 0 5px #212967;
+}
+
+#btnClose:active {
+    transform: translateY(8px);
+    box-shadow: 0 4px #212967;
+}
+
+.starButton {
+
+    height: 5em;
+}
+
+#btnWin {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    margin-top: 1em;
+    border: none;
+    background: none;
+    border: solid 1px black;
+    border-radius: 0.5em;
+    background: var(--primary);
+    width: 15rem;
+    height: 5rem;
+    color: white;
+    font-size: 1.5em;
+    box-shadow: 0 8px #010311;
+    padding: 0.6em;
+}
+
+#btnWin:active {
+    transform: translateY(3px);
+    box-shadow: 0 5px #212967;
+}
+
 @media screen and (min-width: 768px) {
 
 
@@ -460,24 +574,131 @@ h4 {
     }
 
     .questionfinal {
-        height: 60vh;
-        margin-left: 5rem;
-        margin-right: 5rem;
+        display: grid;
+        height: 70vh;
+        grid-template-rows: 2fr, 1fr, 1fr;
+        grid-template-columns: 1fr, 1fr, fr;
+        row-gap: 2rem;
+        align-items: center;
+        margin: 10px;
+        background-color: antiquewhite;
+        box-shadow: 10px 10px 25px 10px rgba(0, 0, 0, 0.361);
+        border: 3px solid rgba(255, 255, 255, 0.724);
+        background: #f4f6ed;
+        width: 90em;
+        height: 55vh;
+        border-radius: 1em;
+        margin-left: 2.5em;
+
+
+
+
     }
+
+
 
     .footer {
         background: #131734;
         display: none;
         bottom: 0;
         width: 100%;
+        height: 20vh;
     }
 
     .footer.scroll1 {
         display: block;
         position: fixed;
+        width: 100%;
+        background-color: #131734;
+    }
+
+    .cannele img {
+
+        width: 20vw;
+        height: 20vh;
+    }
+
+    .scorecannele {
+        font-size: 2.5em;
+        color: rgb(236, 11, 11);
+        position: absolute;
+        left: 24.5%;
+        top: 44%;
     }
 
 
+
+    .macaron img {
+
+        width: 20vw;
+        height: 18vh;
+    }
+
+    .scoremacaron {
+        font-size: 2.5em;
+        color: rgb(236, 11, 11);
+        position: absolute;
+        left: 76%;
+        top: 44%;
+    }
+
+    .bigContainer {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .card {
+        width: 30em;
+    }
+
+    .modal {
+        display: none;
+        position: absolute;
+        top: 110%;
+        left: center;
+    }
+
+    .classModal {
+        border: black solid 1px;
+        padding: 1em;
+        height: 40em;
+        width: 40em;
+        background: #fff;
+        border-radius: 1em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+
+    .classModal h3 {
+        margin-top: 1em;
+        margin-bottom: 1em;
+        font-size: 2em;
+    }
+
+    .classModal img {
+
+        width: 20em;
+    }
+
+    #btnClose {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        background: none;
+        border: solid 1px black;
+        border-radius: 0.5em;
+        background: var(--primary);
+        width: 10rem;
+        height: 7rem;
+        color: white;
+        font-size: 3em;
+        box-shadow: 0 6px #303c91;
+        padding: 0.6em;
+    }
 
     .header ion-icon {
         font-size: 3.5em;
@@ -505,124 +726,50 @@ h4 {
     }
 
     .team {
-        padding-top: 24vh;
+
+        padding-top: 15vh;
         height: 100vh;
     }
+
+
+
+
+
 
     .bigContainer {
         gap: 2em;
     }
 
-}
 
-
-.modal {
-    display: none;
-    position: absolute;
-    top: center;
-    left: center;
-}
-
-.classModal {
-    border: black solid 1px;
-    padding: 2em;
-    background: #fff;
-    border-radius: 1em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-
-
-.classModal h3 {
-    margin-top: 1em;
-    margin-bottom: 1em;
-    font-size: 2em;
-}
-
-.classModal img {
-    width: 25rem;
-}
-
-#btnClose {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: none;
-    background: none;
-    border: solid 1px black;
-    border-radius: 0.5em;
-    background: var(--primary);
-    width: 12rem;
-    height: 3rem;
-    color: white;
-    font-size: 2.5em;
-    box-shadow: 0 10px #303c91;
-    padding: 0.6em;
-}
-
-#btnClose:hover {
-    transform: translateY(5px);
-    box-shadow: 0 5px #212967;
-}
-
-#btnClose:active {
-    transform: translateY(8px);
-    box-shadow: 0 4px #212967;
-}
-
-#btnWin {
-    display: flex;
-    justify-content: center;
-    margin: auto;
-    text-align: center;
-    margin-top: 2em;
-    border: none;
-    background: none;
-    border: solid 1px black;
-    border-radius: 0.5em;
-    background: var(--primary);
-    width: 15rem;
-    height: 3rem;
-    color: white;
-    font-size: 1.5em;
-    box-shadow: 0 8px #010311;
-    padding: 0.6em;
-}
-
-#btnWin:active {
-    transform: translateY(3px);
-    box-shadow: 0 5px #212967;
-}
-
-/* slide */
-/* media screen */
-.fullAnswer {
-    display: grid;
-    /* align-items: center; */
-    /* justify-content: center;
+    /* slide */
+    /* media screen */
+    .fullAnswer {
+        display: grid;
+        /* align-items: center; */
+        /* justify-content: center;
         flex-direction: column; */
-    /* grid-template-columns: 1fr;
+        /* grid-template-columns: 1fr;
         grid-template-rows: repeat(4, 1fr); */
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    border: 1px solid rgb(0, 252, 13);
-    text-align: center;
-}
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        border: 1px solid rgb(0, 252, 13);
+        text-align: center;
+    }
 
-/* media screen */
-.wrongAnswer {
-    padding: 50px;
-    margin: 10px;
-    border-radius: 50% 20% / 10% 40%;
-    background-color: rgb(0, 26, 255);
-}
+    /* media screen */
+    .wrongAnswer {
+        padding: 50px;
+        margin: 10px;
+        border-radius: 50% 20% / 10% 40%;
+        background-color: rgb(0, 26, 255);
+    }
 
-/* media screen */
-.rightAnswer {
-    padding: 50px;
-    margin: 10px;
-    border-radius: 50% 20% / 10% 40%;
-    background-color: rgb(0, 26, 255);
+    /* media screen */
+    .rightAnswer {
+        padding: 50px;
+        margin: 10px;
+        border-radius: 50% 20% / 10% 40%;
+        background-color: rgb(0, 26, 255);
+    }
+
 }

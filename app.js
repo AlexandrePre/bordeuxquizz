@@ -1,41 +1,3 @@
-
-
-/* comptage de point et good and false */
-
-const scoreCanneleTexte = document.querySelector('.scorecannele');
-const scoreMacaronTexte = document.querySelector('.scoremacaron');
-
-const answer = document.getElementsByClassName('answer');
-const answerNice = document.getElementsByClassName('answerGood')
-
-console.log(answerNice);
-
-
-let scoreCannele = 0;
-let scoreCanneleGood = ++scoreCannele
-
-for (const answerGood of answerNice) {
-    answerGood.addEventListener('click', () => {
-
-        answerGood.style.backgroundColor = "green"
-        scoreCanneleTexte.innerHTML = scoreCanneleGood;
-        return scoreCanneleGood = ++scoreCannele;
-
-
-    }
-    );
-}
-
-for (const answerFalse of answer) {
-    answerFalse.addEventListener('click', () => {
-
-        answerFalse.style.backgroundColor = "red"
-
-    }
-    );
-}
-
-
 /* eslint-disable no-unused-expressions */
 /* eslint-disable func-names */
 // scroll header
@@ -43,11 +5,11 @@ const header = document.querySelector('.header');
 const container = document.querySelector('.container');
 const height = container.clientHeight;
 window.addEventListener('scroll', () => {
-  if (window.scrollY > height - 5) {
-    header.classList.add('scroll');
-  } else {
-    header.classList.remove('scroll');
-  }
+    if (window.scrollY > height - 5) {
+        header.classList.add('scroll');
+    } else {
+        header.classList.remove('scroll');
+    }
 });
 
 // scroll footer
@@ -55,14 +17,14 @@ const team = document.querySelector('.team');
 const footer = document.querySelector('.footer');
 const height1 = team.clientHeight;
 window.addEventListener('scroll', () => {
-  if (window.scrollY > height1 + 2222) {
-    footer.classList.add('scroll1');
-  } else {
-    footer.classList.remove('scroll1');
-  }
+    if (window.scrollY > height1 + 2222) {
+        footer.classList.add('scroll1');
+    } else {
+        footer.classList.remove('scroll1');
+    }
 });
 
-// formulaire pour rentrer le nom des équipes
+// formulaire pour rentrer le nom des equipe
 const btn1 = document.getElementById('btn1');
 const btn2 = document.getElementById('btn2');
 const team1 = document.getElementById('team1');
@@ -85,8 +47,8 @@ btnWin.addEventListener('click', () => {
     const modal = document.getElementById('modal');
     const teamWin = document.getElementById('teamWin');
     if (random < 50) {
-    ((modal.style.display = 'flex') && (teamWin.innerHTML = team1.innerHTML));
-  } else { ((modal.style.display = 'flex') && (teamWin.innerHTML = team2.innerHTML)); }
+        ((modal.style.display = 'flex') && (teamWin.innerHTML = team1.innerHTML));
+    } else { ((modal.style.display = 'flex') && (teamWin.innerHTML = team2.innerHTML)); }
 
     btnWin.onsubmit = function (event) {
         event.preventDefault();
@@ -106,3 +68,131 @@ btnClose.addEventListener('click', () => {
 btnClose.onsubmit = function (event) {
     event.preventDefault();
 };
+
+// slide horizontal
+
+const items = document.querySelectorAll('.question');
+const nbSlide = items.length;
+const suivant = document.querySelector('.right');
+const precedent = document.querySelector('.left');
+let slideIndex = 0;
+const answer2 = document.querySelectorAll('h3');
+
+
+items[slideIndex].style.display = 'block';
+items[slideIndex + 1].style.display = 'none';
+items[slideIndex + 2].style.display = 'none';
+items[slideIndex + 3].style.display = 'none';
+items[slideIndex + 4].style.display = 'none';
+
+function slideSuivante() {
+    items[slideIndex].style.display = 'none';
+
+    if (slideIndex < nbSlide - 1) {
+        slideIndex++;
+    } else {
+        slideIndex = 1;
+    }
+
+    items[slideIndex].style.display = 'block';
+
+    // remise à zéro des classes bonne et mauvaise réponse : function dans la function
+
+    function testAnswer2() {
+
+        for (let i = 0; i < answer2.length; i++) {
+
+            const testAnswer2 = answer2[i].className;
+
+            if (testAnswer2 == 'wrongAnswerRed') {
+                answer2[i].className = "wrongAnswer";
+            }
+            if (testAnswer2 == 'rightAnswerGreen') {
+                answer2[i].className = "rightAnswer";
+            }
+        }
+    }
+
+    testAnswer2();
+    console.log(answer2);
+
+}
+suivant.addEventListener('click', slideSuivante);
+
+function slidePrecedente() {
+    items[slideIndex].style.display = 'none';
+
+    if (slideIndex > 1) {
+        slideIndex--;
+    } else {
+        slideIndex = nbSlide - 1;
+    }
+
+    items[slideIndex].style.display = 'block';
+
+    // remise à zéro des classes bonne et mauvaise réponse : function dans la function
+
+    function testAnswer2() {
+
+        for (let i = 0; i < answer2.length; i++) {
+
+            const testAnswer2 = answer2[i].className;
+
+            if (testAnswer2 == 'wrongAnswerRed') {
+                answer2[i].className = "wrongAnswer";
+            }
+            if (testAnswer2 == 'rightAnswerGreen') {
+                answer2[i].className = "rightAnswer";
+            }
+        }
+    }
+
+    testAnswer2();
+    console.log(answer2);
+}
+
+precedent.addEventListener('click', slidePrecedente);
+
+function keyPress(e) {
+    console.log(e);
+
+    if (e.keyCode === 37) {
+        slidePrecedente();
+    } else if (e.keyCode === 39) {
+        slideSuivante();
+    }
+}
+document.addEventListener('keydown', keyPress)
+
+// function background color change
+
+const scoreCanneleTexte = document.querySelector('.scorecannele');
+const scoreMacaronTexte = document.querySelector('.scoremacaron');
+
+let scoreCannele = 0;
+let scoreMacaron = 0;
+
+for (let i = 0; i < answer2.length; i++) {
+
+    function testAnswer() {
+        const testAnswer = answer2[i].className;
+
+        if (testAnswer == 'wrongAnswer') {
+            answer2[i].className = "wrongAnswerRed";
+        }
+        if (testAnswer == 'rightAnswer') {
+            answer2[i].className = "rightAnswerGreen";
+            if (slideIndex % 2 == 0) {
+                scoreCannele++;
+                console.log("cannele" + scoreCannele);
+                scoreCanneleTexte.innerHTML = scoreCannele;
+            } else scoreMacaron++
+            console.log("macaron" + scoreMacaron);
+            scoreMacaronTexte.innerHTML = scoreMacaron;
+        }
+    }
+
+    answer2[i].addEventListener('click', testAnswer);
+}
+
+

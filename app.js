@@ -19,7 +19,7 @@ const quizz1 = document.querySelector('.quizz1')
 const height1 = team.clientHeight;
 const height2 = quizz1.clientHeight;
 window.addEventListener('scroll', () => {
-  if (window.scrollY > height1 + height2 - 10) {
+  if (window.scrollY > height1 + height2 - 20) {
     footer.classList.add('scroll1');
   } else {
     footer.classList.remove('scroll1');
@@ -50,7 +50,13 @@ btnWin.addEventListener('click', () => {
   const teamWin = document.getElementById('teamWin');
   if (random < 50) {
     ((modal.style.display = 'flex') && (teamWin.innerHTML = team1.innerHTML));
-  } else { ((modal.style.display = 'flex') && (teamWin.innerHTML = team2.innerHTML)); }
+    document.getElementById('winner').src = "/assets/vin blanc.png";
+    document.getElementById('looser').src = "/assets/vin rouge.png";
+  } else {
+    ((modal.style.display = 'flex') && (teamWin.innerHTML = team2.innerHTML));
+    document.getElementById('winner').src = "/assets/vin rouge.png";
+    document.getElementById('looser').src = "/assets/vin blanc.png";
+  }
 
   btnWin.onsubmit = function (event) {
     event.preventDefault();
@@ -81,11 +87,9 @@ let slideIndex = 0;
 const answer2 = document.querySelectorAll('h3');
 const wrongInGreen = document.querySelectorAll('.rightAnswer');
 
-items[slideIndex].style.display = 'block';
-items[slideIndex + 1].style.display = 'none';
-items[slideIndex + 2].style.display = 'none';
-items[slideIndex + 3].style.display = 'none';
-items[slideIndex + 4].style.display = 'none';
+items[0].style.display = 'block';
+
+
 
 function slideSuivante() {
   items[slideIndex].style.display = 'none';
@@ -194,15 +198,15 @@ const newImg = document.getElementById("chocoId");
 
 chocolatine.addEventListener('click', () => {
 
-  newImg.src = "/assets/etchebest-philippe.gif"
-  newImg.style.width = "70vw"
-  newImg.style.height = "50vh"
+  newImg.src = "/assets/etchebest-philippe.gif";
+  newImg.style.width = "85vw";
+  newImg.style.height = "45vh";
 
 })
 
 pain.addEventListener('click', () => {
 
-  newImg.src = "/assets/etchebest-xari.gif"
-  newImg.style.width = "70vw"
-  newImg.style.height = "50vh"
+  newImg.src = "/assets/etchebest-xari.gif";
+  newImg.style.width = "85vw";
+  newImg.style.height = "45vh";
 })

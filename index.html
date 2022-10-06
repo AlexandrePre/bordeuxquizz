@@ -57,17 +57,16 @@
                         <h2>Répartition des équipes</h2>
                         <form id="form">
                             <div class="inputBox">
-                                <input type="text" id="text1" placeholder="Team 1" value="">
+                                <input type="text" id="text1" placeholder="Vin rouge" value="">
                                 <h2 id="team1"></h2>
                                 <button id="btn1">OK</button>
-                                <h2 id="team1"></h2>
                             </div>
-                            <br><br><br>
+
                             <div class="inputBox">
-                                <input type="text" id="text2" placeholder="Team 2" value="">
+                                <input type="text" id="text2" placeholder="Vin blanc" value="">
                                 <h2 id="team2"></h2>
                                 <button id="btn2">OK</button>
-                                <h2 id="team2"></h2>
+
                             </div>
                         </form>
                     </div>
@@ -82,7 +81,7 @@
             </div>
         </div>
 
-        <button id="btnWin">Qui est l'équipe vin rouge?</button>
+        <button id="btnWin">Qui commence?</button>
 
 
 
@@ -128,16 +127,18 @@
             <div class="question">
                 <h2 class="stringQuestion">Quelle porte est connue à Bordeaux ?</h2>
                 <div class="fullAnswer">
-                    <h3 class="wrongAnswer answer">Porte d'Alsace</h3>
-                    <h3 class="wrongAnswer answer">Porte de Gironde</h3>
-                    <h3 class="rightAnswer answer">Porte de Bourgogne</h3>
-                    <h3 class="wrongAnswer answer">Porte des toilettes</h3>
+                    <h3 class="wrongAnswer">Porte d'Alsace</h3>
+                    <h3 class="wrongAnswer">Porte de Gironde</h3>
+                    <h3 class="rightAnswer">Porte de Bourgogne</h3>
+                    <h3 class="wrongAnswer">Porte des toilettes</h3>
                 </div>
             </div>
         </div>
-    
+
         <div class="cont-btn">
-            <div class="btn-nav right"><ion-icon name="arrow-redo-circle-outline"></ion-icon></div>
+            <div class="btn-nav right">
+                <ion-icon name="arrow-redo-circle-outline"></ion-icon>
+            </div>
         </div>
     </section>
 
@@ -166,30 +167,30 @@
         </div>
 
 
- 
 
-    <footer class="footer">
 
-        <div class="logoCompteur">
+        <footer class="footer">
 
-            <div class="cannele">
-                <img src="/assets/vin rouge.png" alt="vinrouge">
-                <h5 class="scorecannele">
-                    0 </h5>
+            <div class="logoCompteur">
+
+                <div class="cannele">
+                    <img id="winner" src="/assets/vin rouge.png" alt="vinrouge">
+                    <h5 class="scorecannele">
+                        0 </h5>
+                </div>
+                <div class="macaron">
+                    <img id="looser" src="/assets/vin blanc.png" alt="vinblanc">
+                    <h5 class="scoremacaron">
+                        0 </h5>
+                </div>
             </div>
-            <div class="macaron">
-                <img src="/assets/vin blanc.png" alt="vinblanc">
-                <h5 class="scoremacaron">
-                    0 </h5>
-            </div>
-        </div>
 
-    </footer>
+        </footer>
 
-    <script src="app.js"></script>
+        <script src="app.js"></script>
 
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 </body>
 

@@ -1,15 +1,4 @@
-/* eslint-disable brace-style */
-/* eslint-disable no-undef */
-/* eslint-disable no-loop-func */
-/* eslint-disable no-inner-declarations */
-/* eslint-disable no-plusplus */
-/* eslint-disable eqeqeq */
-/* eslint-disable quotes */
-/* eslint-disable no-shadow */
-/* eslint-disable padded-blocks */
-/* eslint-disable indent */
-/* eslint-disable no-unused-expressions */
-/* eslint-disable func-names */
+
 // scroll header
 const header = document.querySelector('.header');
 const container = document.querySelector('.container');
@@ -90,6 +79,7 @@ const suivant = document.querySelector('.right');
 const precedent = document.querySelector('.left');
 let slideIndex = 0;
 const answer2 = document.querySelectorAll('h3');
+const wrongInGreen = document.querySelectorAll('.rightAnswer');
 
 items[slideIndex].style.display = 'block';
 items[slideIndex + 1].style.display = 'none';
@@ -98,75 +88,75 @@ items[slideIndex + 3].style.display = 'none';
 items[slideIndex + 4].style.display = 'none';
 
 function slideSuivante() {
-    items[slideIndex].style.display = 'none';
+  items[slideIndex].style.display = 'none';
 
-    if (slideIndex < nbSlide - 1) {
-        slideIndex++;
-    } else {
-        slideIndex = 1;
+  if (slideIndex < nbSlide - 1) {
+    slideIndex++;
+  } else {
+    slideIndex = 1;
+  }
+
+  items[slideIndex].style.display = 'block';
+
+  // remise à zéro des classes bonne et mauvaise réponse : function dans la function
+
+  function testAnswer2() {
+
+    for (let i = 0; i < answer2.length; i++) {
+
+      const testAnswer2 = answer2[i].className;
+
+      if (testAnswer2 == 'wrongAnswerRed') {
+        answer2[i].className = "wrongAnswer";
+      }
+      if (testAnswer2 == 'rightAnswerGreen') {
+        answer2[i].className = "rightAnswer";
+      }
     }
+  }
 
-    items[slideIndex].style.display = 'block';
-
-    // remise à zéro des classes bonne et mauvaise réponse : function dans la function
-
-    function testAnswer2() {
-
-        for (let i = 0; i < answer2.length; i++) {
-
-            const testAnswer2 = answer2[i].className;
-
-            if (testAnswer2 == 'wrongAnswerRed') {
-                answer2[i].className = "wrongAnswer";
-            }
-            if (testAnswer2 == 'rightAnswerGreen') {
-                answer2[i].className = "rightAnswer";
-            }
-        }
-    }
-
-    testAnswer2();
+  testAnswer2();
 
 }
 suivant.addEventListener('click', slideSuivante);
 
 function slidePrecedente() {
-    items[slideIndex].style.display = 'none';
+  items[slideIndex].style.display = 'none';
 
-    if (slideIndex > 1) {
-        slideIndex--;
-    } else {
-        slideIndex = nbSlide - 1;
+  if (slideIndex > 1) {
+    slideIndex--;
+  } else {
+    slideIndex = nbSlide - 1;
+  }
+
+  items[slideIndex].style.display = 'block';
+
+  // remise à zéro des classes bonne et mauvaise réponse : function dans la function
+
+  function testAnswer2() {
+
+    for (let i = 0; i < answer2.length; i++) {
+
+      const testAnswer2 = answer2[i].className;
+
+      if (testAnswer2 == 'wrongAnswerRed') {
+        answer2[i].className = "wrongAnswer";
+      }
+      if (testAnswer2 == 'rightAnswerGreen') {
+        answer2[i].className = "rightAnswer";
+      }
     }
+  }
 
-    items[slideIndex].style.display = 'block';
-
-    // remise à zéro des classes bonne et mauvaise réponse : function dans la function
-
-    function testAnswer2() {
-
-        for (let i = 0; i < answer2.length; i++) {
-
-            const testAnswer2 = answer2[i].className;
-
-            if (testAnswer2 == 'wrongAnswerRed') {
-                answer2[i].className = "wrongAnswer";
-            }
-            if (testAnswer2 == 'rightAnswerGreen') {
-                answer2[i].className = "rightAnswer";
-            }
-        }
-    }
-
-    testAnswer2();
+  testAnswer2();
 }
 
 function keyPress(e) {
-    if (e.keyCode === 37) {
-        slidePrecedente();
-    } else if (e.keyCode === 39) {
-        slideSuivante();
-    }
+  if (e.keyCode === 37) {
+    slidePrecedente();
+  } else if (e.keyCode === 39) {
+    slideSuivante();
+  }
 }
 document.addEventListener('keydown', keyPress);
 
@@ -177,19 +167,42 @@ const scoreMacaronTexte = document.querySelector('.scoremacaron');
 let scoreCannele = 0;
 let scoreMacaron = 0;
 for (let i = 0; i < answer2.length; i++) {
-    function testAnswer() {
-        const testAnswer = answer2[i].className;
-        if (testAnswer == 'wrongAnswer') {
-            answer2[i].className = "wrongAnswerRed";
-            wrongInGreen[slideIndex - 1].className = "rightAnswerGreen";
-        }
-        if (testAnswer == 'rightAnswer') {
-            answer2[i].className = "rightAnswerGreen";
-            if (slideIndex % 2 == 0) {
-                scoreCannele++; scoreCanneleTexte.innerHTML = scoreCannele;
-            // eslint-disable-next-line semi
-            } else scoreMacaron++;
-            scoreMacaronTexte.innerHTML = scoreMacaron;
-        }
+  function testAnswer() {
+    const testAnswer = answer2[i].className;
+    if (testAnswer == 'wrongAnswer') {
+      answer2[i].className = "wrongAnswerRed";
+      wrongInGreen[slideIndex - 1].className = "rightAnswerGreen";
     }
-    answer2[i].addEventListener('click', testAnswer); }
+    if (testAnswer == 'rightAnswer') {
+      answer2[i].className = "rightAnswerGreen";
+      if (slideIndex % 2 == 0) {
+        scoreCannele++; scoreCanneleTexte.innerHTML = scoreCannele;
+        // eslint-disable-next-line semi
+      } else scoreMacaron++;
+      scoreMacaronTexte.innerHTML = scoreMacaron;
+    }
+  }
+  answer2[i].addEventListener('click', testAnswer);
+}
+
+
+/* question finale */
+
+const chocolatine = document.querySelector('.chocolatine');
+const pain = document.querySelector('.pain');
+const newImg = document.getElementById("chocoId");
+
+chocolatine.addEventListener('click', () => {
+
+  newImg.src = "/assets/etchebest-philippe.gif"
+  newImg.style.width = "70vw"
+  newImg.style.height = "50vh"
+
+})
+
+pain.addEventListener('click', () => {
+
+  newImg.src = "/assets/etchebest-xari.gif"
+  newImg.style.width = "70vw"
+  newImg.style.height = "50vh"
+})

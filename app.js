@@ -23,11 +23,12 @@ window.addEventListener('scroll', () => {
 });
 
 // scroll footer
-const quizz1 = document.querySelector('.quizz1');
+
 const team = document.querySelector(".team")
 const footer = document.querySelector('.footer');
-const height1 = quizz1.clientHeight;
-const height2 = team.clientHeight;
+const quizz1 = document.querySelector('.quizz1')
+const height1 = team.clientHeight;
+const height2 = quizz1.clientHeight;
 window.addEventListener('scroll', () => {
   if (window.scrollY > height1 + height2 - 10) {
     footer.classList.add('scroll1');
@@ -36,7 +37,7 @@ window.addEventListener('scroll', () => {
   }
 });
 
-// formulaire pour rentrer le nom des équipes
+// formulaire pour rentrer le nom des equipe
 const btn1 = document.getElementById('btn1');
 const btn2 = document.getElementById('btn2');
 const team1 = document.getElementById('team1');
@@ -81,13 +82,14 @@ btnClose.onsubmit = function (event) {
   event.preventDefault();
 };
 
+// slide horizontal
+
 const items = document.querySelectorAll('.question');
 const nbSlide = items.length;
 const suivant = document.querySelector('.right');
 const precedent = document.querySelector('.left');
 let slideIndex = 0;
 const answer2 = document.querySelectorAll('h3');
-const wrongInGreen = document.querySelectorAll('.rightAnswer');
 
 items[slideIndex].style.display = 'block';
 items[slideIndex + 1].style.display = 'none';

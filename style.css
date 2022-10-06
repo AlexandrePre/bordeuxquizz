@@ -179,27 +179,28 @@ h4 {
 
 }
 
+
+
 .questionfinal {
     display: grid;
     height: 70vh;
     grid-template-rows: 1fr, 1fr, 1fr;
     grid-template-columns: 1fr, 1fr, 1fr;
-    row-gap: 2rem;
     align-items: center;
-    margin: 10px;
-    background-color: antiquewhite;
+    margin: 5vw;
+    background-color: var(--primary);
     box-shadow: 10px 10px 25px 10px rgba(0, 0, 0, 0.361);
     border: 3px solid rgba(255, 255, 255, 0.724);
-    background: #f4f6ed;
-    width: 18em;
-    height: 28em;
+    background: var(--primary);
+    width: 90vw;
     border-radius: 1em;
-
-
-
 
 }
 
+.questionfinal h4 {
+    font-size: 8vw;
+    color: #f4f6ed;
+}
 
 .choco {
     display: flex;
@@ -210,8 +211,8 @@ h4 {
 
 .choco img {
 
-    width: 20vw;
-    height: 20vh;
+    width: 40vw;
+
 }
 
 
@@ -575,24 +576,20 @@ h4 {
 
     .questionfinal {
         display: grid;
-        height: 70vh;
         grid-template-rows: 2fr, 1fr, 1fr;
         grid-template-columns: 1fr, 1fr, fr;
-        row-gap: 2rem;
         align-items: center;
-        margin: 10px;
-        background-color: antiquewhite;
+        background-color: var(--primary);
         box-shadow: 10px 10px 25px 10px rgba(0, 0, 0, 0.361);
         border: 3px solid rgba(255, 255, 255, 0.724);
-        background: #f4f6ed;
-        width: 90em;
-        height: 55vh;
+        background: var(--primary);
         border-radius: 1em;
-        margin-left: 2.5em;
+        width: 90vw;
+        height: 60vh;
+    }
 
-
-
-
+    .questionfinal h4 {
+        font-size: 5vw;
     }
 
 

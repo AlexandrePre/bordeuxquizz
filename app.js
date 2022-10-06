@@ -8,6 +8,7 @@
 /* eslint-disable func-names */
 /* eslint-disable no-unused-expressions */
 
+
 // scroll header
 const header = document.querySelector('.header');
 const container = document.querySelector('.container');
@@ -214,3 +215,4 @@ pain.addEventListener('click', () => {
   chocolatine.style.display = "none";
   pain.style.display = "none";
 });
+

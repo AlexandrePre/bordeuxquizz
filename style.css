@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,900&display=swap');
+
 
 html {
     scroll-behavior: smooth;
@@ -56,9 +56,6 @@ html {
 /* home page */
 
 
-.boxForm {
-    gap: 5em;
-}
 
 
 .container {
@@ -135,7 +132,7 @@ h4 {
 
 .questionMort {
     height: 100vh;
-    margin-top: 3rem;
+    padding-top: 10vh;
 }
 
 .questionfinal {
@@ -162,17 +159,11 @@ h4 {
 .choco {
     display: flex;
     justify-content: center;
-
-
 }
 
 .choco img {
-
     width: 40vw;
-
 }
-
-
 
 .container .button {
     display: flex;
@@ -195,8 +186,10 @@ h4 {
     font-size: 110%;
     color: rgb(236, 11, 11);
     position: absolute;
-    left: 23%;
-    top: 30%;
+    left: 38%;
+    top: 25%;
+    cursor: pointer;
+
 }
 
 
@@ -213,7 +206,9 @@ h4 {
     position: absolute;
     left: 73%;
     top: 20%;
+    cursor: pointer;
 }
+
 
 
 
@@ -231,17 +226,18 @@ h4 {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 8em;
+    gap: 12em;
 }
 
 .card {
     box-shadow: 10px 10px 25px 10px rgba(0, 0, 0, 0.361);
     border: 3px solid rgba(255, 255, 255, 0.724);
     background: #f4f6ed;
-    width: 90vw;
-    height: 60vh;
+    width: 85vw;
+    height: 65vh;
     border-radius: 1em;
 }
+
 
 
 
@@ -262,27 +258,20 @@ h4 {
 
 
 
-.form h2 {
-    display: flex;
-    justify-content: center;
-    margin-top: 10vh;
-    margin-bottom: 5vw;
-    color: #131734;
-}
-
-.inputBox {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 1em;
-}
-
 .inputBox h2 {
     display: flex;
     justify-content: center;
     color: var(--primary);
     margin-top: 1em;
 }
+
+.inputBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3em;
+}
+
 
 .inputBox input {
     background: rgba(255, 255, 255, 0.1);
@@ -293,7 +282,6 @@ h4 {
     box-shadow: 5px 5px 20px 2px rgba(0, 0, 0, 0.361);
     border: 1px solid rgba(255, 255, 255, 0.724);
     font-size: 1em;
-
 }
 
 .inputBox button {
@@ -306,6 +294,17 @@ h4 {
     cursor: pointer;
     color: var(--secondary);
 }
+
+
+
+/* slide */
+
+
+
+
+
+
+
 
 
 
@@ -329,28 +328,29 @@ h4 {
 .modal {
     display: none;
     position: absolute;
-    top: 210%;
+    top: 207.8%;
     left: center;
 }
 
 .classModal {
     border: black solid 1px;
-    padding: 2em;
+    padding: 1em;
     background: #fff;
     border-radius: 1em;
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 85vw;
+    height: 65vh;
 }
-
 .classModal h3 {
     margin-top: 1em;
-    margin-bottom: 1em;
-    font-size: 1em;
+    margin-bottom: 0.5em;
+    font-size: 2em;
 }
 
 .classModal img {
-    width: 10em;
+    width: 17em;
 }
 
 .footer {
@@ -365,8 +365,8 @@ h4 {
     position: fixed;
 }
 
-.footer img {
-    width: 1em;
+.footer img{
+    width: 5em;
 }
 
 #btnClose {
@@ -378,10 +378,10 @@ h4 {
     border: solid 1px black;
     border-radius: 0.5em;
     background: var(--primary);
-    width: 3rem;
+    width: 6em;
     height: 2rem;
     color: white;
-    font-size: 1em;
+    font-size: 2em;
     box-shadow: 0 6px #303c91;
     padding: 0.6em;
 }
@@ -394,6 +394,15 @@ h4 {
 #btnClose:active {
     transform: translateY(8px);
     box-shadow: 0 4px #212967;
+}
+
+a{
+    text-decoration: none;
+    color: var(--secondary);
+}
+
+a:visited{
+    text-decoration: none;
 }
 
 .starButton {
@@ -412,8 +421,8 @@ h4 {
     border: solid 1px black;
     border-radius: 0.5em;
     background: var(--primary);
-    width: 80vw;
-
+    width: 15rem;
+    height: 3rem;
     color: white;
     font-size: 1.5em;
     box-shadow: 0 8px #010311;
@@ -433,7 +442,7 @@ h4 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 10vh;
+    padding-top: 18vh;
 }
 
 
@@ -457,13 +466,12 @@ h4 {
 }
 
 
-
-.fullAnswer img {
+.fullAnswer img{
     width: 40%;
 }
 
-.fullAnswer img:nth-child(1) {
-    width: 70%;
+.fullAnswer img:nth-child(1){
+    width: 80%;
 }
 
 .wrongAnswerRed {
@@ -504,9 +512,7 @@ h4 {
 }
 
 
-
-
-.fullAnswer h3:nth-child(1) {
+.fullAnswer h3:nth-child(1){
     border: 2px solid orange;
 }
 
@@ -528,78 +534,44 @@ h4 {
 }
 
 .btn-nav {
-    font-size: 50px;
     cursor: pointer;
-
 }
 
-.cont-btn ion-icon {
-    font-size: 15vw;
+.cont-btn ion-icon{
+    font-size: 5em;
     color: var(--primary);
 }
 
 
-
-
-
-
-/* media screen attention */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media screen and (min-width: 768px) {
 
-    .header div {
+    .header div{
         height: 12vh;
     }
-
-    .header ion-icon {
+    .header ion-icon{
         font-size: 3.5em;
     }
-
-    .header div a {
+    .header div a{
         left: 15%;
     }
-
     .container {
         padding-top: initial;
         gap: 6em;
     }
-
-    .container a {
+    .container a{
         font-size: 2.5em;
     }
-
-    .container ion-icon {
+    
+    .container ion-icon{
         font-size: 3em;
     }
-
-    .containerTitle {
+    .containerTitle{
         height: 18em;
     }
-
-    .team {
+    .team{
         padding-top: 24vh;
         height: 100vh;
     }
-
-    .bigContainer {
-        gap: 2em;
-    }
-
-
-
     .questionfinal {
         display: grid;
         grid-template-rows: 2fr, 1fr, 1fr;
@@ -631,29 +603,26 @@ h4 {
 
     }
 
-
+.containerCard p{
+    font-size: 1.3em;
+}
 
     .footer {
         background: #131734;
         display: none;
         bottom: 0;
         width: 100%;
-        height: 20vh;
     }
-
     .footer.scroll1 {
         display: block;
         position: fixed;
         width: 100%;
         background-color: #131734;
     }
-
     .cannele img {
-
         width: 20vw;
         height: 20vh;
     }
-
     .scorecannele {
         font-size: 2.5em;
         color: rgb(236, 11, 11);
@@ -661,15 +630,11 @@ h4 {
         left: 24.5%;
         top: 44%;
     }
-
-
-
-    .macaron img {
-
-        width: 20vw;
-        height: 18vh;
-    }
-
+.macaron{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
     .scoremacaron {
         font-size: 2.5em;
         color: rgb(236, 11, 11);
@@ -677,48 +642,40 @@ h4 {
         left: 76%;
         top: 44%;
     }
-
     .bigContainer {
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
+        gap: 10em;
     }
-
     .card {
         width: 30em;
     }
-
+    
     .modal {
         display: none;
         position: absolute;
         top: 110%;
         left: center;
     }
-
     .classModal {
         border: black solid 1px;
-        padding: 1em;
+        padding: em;
         height: 40em;
-        width: 40em;
+        width: 30em;
         background: #fff;
         border-radius: 1em;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-
-
-
     .classModal h3 {
         margin-top: 1em;
         margin-bottom: 1em;
         font-size: 2em;
     }
-
     .classModal img {
-
-        width: 20em;
+         width: 22em;
     }
-
     #btnClose {
         display: flex;
         align-items: center;
@@ -728,50 +685,109 @@ h4 {
         border: solid 1px black;
         border-radius: 0.5em;
         background: var(--primary);
-        width: 10rem;
-        height: 7rem;
+        width: 7em;
+        height: 2em;
         color: white;
-        font-size: 3em;
+        font-size: 2em;
         box-shadow: 0 6px #303c91;
         padding: 0.6em;
     }
-
     .header ion-icon {
         font-size: 3.5em;
     }
-
     .header div a {
         left: 15%;
     }
-
     .container {
         padding-top: initial;
         gap: 10em;
     }
-
     .container a {
         font-size: 2.5em;
     }
-
     .container ion-icon {
         font-size: 3em;
     }
-
     .containerTitle {
         height: 18em;
     }
-
     .team {
-
         padding-top: 15vh;
         height: 100vh;
+        background: url(/assets/bridge-4120830_1920\ copie.jpg);
+        background-size: cover;
+        background-position: center;
     }
-
-
-    .bigContainer {
-        gap: 2em;
+    .fullAnswer img:nth-child(1){
+        width: 60%;
     }
+    .slider{
+        width: 60%;
+    }
+    .cont-btn {
+    margin-top: 1em;
+}
+.fullAnswer h3{
+    width: 40%;
+    margin: 0.5em;
+}
+.fullAnswer img{
+    width: 35%;
+}
+.choco img {
+    width: 20%;
+}
+ .chocolatine h4{
+    font-size: 3em;
+}
+.pain h4{
+    font-size: 2.5em;
+}
+.questionfinal {
+    width: 50%;
+    height: 70%;
+}
+.questionMort {
+display: flex;
+    justify-content: center;
+}
 
+}
 
+.loser{
+    color: #fff;
+}
 
+#winner, #looser{
+    width: 6em;
+    height: 6em;
+}
+
+.btnMort{
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    margin: auto;
+    margin-top: 1em;
+    border: none;
+    background: none;
+    border: solid 1px white;
+    border-radius: 0.5em;
+    background: var(--primary);
+    width: 15rem;
+    height: 3rem;
+    color: white;
+    font-size: 1.5em;
+    box-shadow: 0 8px #010311;
+    padding: 0.6em;
+    margin-bottom: 1.5em;
+}
+
+#btnMort:active {
+    transform: translateY(3px);
+    box-shadow: 0 5px #212967;
+}
+
+.chocolatine, .pain{
+    cursor: pointer;
 }

@@ -206,7 +206,7 @@ chocolatine.addEventListener('click', () => {
 
   newImg.src = "/assets/etchebest-philippe.gif"
   newImg.style.width = "70vw"
-  newImg.style.height = "55vh"
+  newImg.style.height = "50vh"
 
 })
 
@@ -214,7 +214,7 @@ pain.addEventListener('click', () => {
 
   newImg.src = "/assets/etchebest-xari.gif"
   newImg.style.width = "70vw"
-  newImg.style.height = "55vh"
+  newImg.style.height = "50vh"
 })
 
 /*

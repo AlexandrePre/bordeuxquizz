@@ -41,19 +41,44 @@ btn2.addEventListener('click', () => {
 });
 
 // open modal
+// const random = Math.floor(Math.random() * 100) + 1;
+const random = 60;
+
 const btnWin = document.getElementById('btnWin');
+
+const winnerTexte = document.querySelector('.winner');
+const loserTexte = document.querySelector('.loser');
+
 btnWin.addEventListener('click', () => {
-    const random = Math.floor(Math.random() * 100) + 1;
+
     const modal = document.getElementById('modal');
     const teamWin = document.getElementById('teamWin');
     if (random < 50) {
         ((modal.style.display = 'flex') && (teamWin.innerHTML = team1.innerHTML));
-    } else { ((modal.style.display = 'flex') && (teamWin.innerHTML = team2.innerHTML)); }
+        const winner = team1.innerHTML;
+        const loser = team2.innerHTML;
+        console.log(winner);
+        console.log(loser);
+        winnerTexte.innerHTML = winner;
+        loserTexte.innerHTML = loser;
+    } else {
+        ((modal.style.display = 'flex') && (teamWin.innerHTML = team2.innerHTML));
+        const winner = team2.innerHTML;
+        const loser = team1.innerHTML;
+        console.log(winner);
+        console.log(loser);
+        winnerTexte.innerHTML = winner;
+        loserTexte.innerHTML = loser;
+    }
+
+
 
     btnWin.onsubmit = function (event) {
         event.preventDefault();
     };
 });
+
+
 const form = document.getElementById('form');
 form.onsubmit = function (event) {
     event.preventDefault();
@@ -77,6 +102,8 @@ const suivant = document.querySelector('.right');
 const precedent = document.querySelector('.left');
 let slideIndex = 0;
 const answer2 = document.querySelectorAll('h3');
+const wrongInGreen = document.querySelectorAll('.rightAnswer');
+
 
 
 items[slideIndex].style.display = 'block';
@@ -86,6 +113,9 @@ items[slideIndex + 3].style.display = 'none';
 items[slideIndex + 4].style.display = 'none';
 
 function slideSuivante() {
+
+    console.log(random);
+
     items[slideIndex].style.display = 'none';
 
     if (slideIndex < nbSlide - 1) {
@@ -114,8 +144,6 @@ function slideSuivante() {
     }
 
     testAnswer2();
-    console.log(answer2);
-
 }
 suivant.addEventListener('click', slideSuivante);
 
@@ -148,7 +176,6 @@ function slidePrecedente() {
     }
 
     testAnswer2();
-    console.log(answer2);
 }
 
 precedent.addEventListener('click', slidePrecedente);
@@ -166,11 +193,19 @@ document.addEventListener('keydown', keyPress)
 
 // function background color change
 
-const scoreCanneleTexte = document.querySelector('.scorecannele');
-const scoreMacaronTexte = document.querySelector('.scoremacaron');
 
-let scoreCannele = 0;
-let scoreMacaron = 0;
+
+
+
+
+
+
+
+const scoreWinnerTexte = document.querySelector('.scorecannele');
+const scoreLoserTexte = document.querySelector('.scoremacaron');
+
+let scoreWinner = 0;
+let scoreLoser = 0;
 
 for (let i = 0; i < answer2.length; i++) {
 
@@ -179,20 +214,20 @@ for (let i = 0; i < answer2.length; i++) {
 
         if (testAnswer == 'wrongAnswer') {
             answer2[i].className = "wrongAnswerRed";
+            wrongInGreen[slideIndex - 1].className = "rightAnswerGreen";
         }
         if (testAnswer == 'rightAnswer') {
             answer2[i].className = "rightAnswerGreen";
             if (slideIndex % 2 == 0) {
-                scoreCannele++;
-                console.log("cannele" + scoreCannele);
-                scoreCanneleTexte.innerHTML = scoreCannele;
-            } else scoreMacaron++
-            console.log("macaron" + scoreMacaron);
-            scoreMacaronTexte.innerHTML = scoreMacaron;
+                scoreWinner++;
+                console.log("cannele" + scoreWinner);
+                scoreWinnerTexte.innerHTML = scoreWinner;
+            } else scoreLoser++
+            console.log("macaron" + scoreLoser);
+            scoreLoserTexte.innerHTML = scoreLoser;
         }
     }
 
     answer2[i].addEventListener('click', testAnswer);
 }
-
 

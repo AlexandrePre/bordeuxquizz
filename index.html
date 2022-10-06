@@ -34,58 +34,62 @@
     <section class="team" id="ancrePlay">
         <div class="bigContainer">
             <div class="card">
-                <div class="containerCard">
+                <div class="containerCard" id="Reglement">
                     <h2>Réglement</h2>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi iusto esse a, maxime dicta impedit
-                        facere, sunt nihil adipisci corrupti architecto! Placeat harum ratione minus vel aspernatur
-                        tenetur sit quis?</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque vel recusandae saepe excepturi
-                        placeat eveniet totam distinctio nam aspernatur, quae nulla nesciunt. Vel adipisci aliquam modi
-                        nostrum excepturi magnam? Eius.</p>
+                    <br>
+                    <p>Ce jeu permet de vous faire découvrir Bordeaux et l'école de la Wild Code School Bordeaux</p><br>
+
+                    <p>Le Quiz d'un questionnaire sur Bordeaux et sur la wild.<br><br>
+
+                        Première étape : tirage au sort de l'équipe qui sera vin rouge et qui commence.
+                        <br><br>
+                        Deuxième étape : chaque équipe répond à tour de rôle.
+                        <br><br>
+                        A la fin du questionnaire, l'équipe qui a le plus de point répond à la question de la mort.
+                    </p>
                 </div>
+
+
             </div>
             <div class="boxForm">
                 <div class="card">
-                    <div class="containerCard">
+                    <div class="containerCard" id="choiseTeam">
                         <h2>Répartition des équipes</h2>
                         <form id="form">
                             <div class="inputBox">
                                 <input type="text" id="text1" placeholder="Team 1" value="">
                                 <button id="btn1">OK</button>
+                                <h2 id="team1"></h2>
                             </div>
+                            <br><br><br>
                             <div class="inputBox">
                                 <input type="text" id="text2" placeholder="Team 2" value="">
                                 <button id="btn2">OK</button>
+                                <h2 id="team2"></h2>
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
-            <div class="card">
-                <div class="containerCard">
-                    <h2 id="team1"></h2>
-                    <img src="" alt="">
-                </div>
-            </div>
-            <div class="card">
-                <div class="containerCard">
-                    <h2 id="team2"></h2>
-                    <img src="" alt="">
-                </div>
-            </div>
+
             <div class="modal" id="modal">
                 <div class="classModal">
                     <img src="/assets/dd7ad49354b2a89638ba15925905610a.gif" alt="">
-                    <h3>L'équipe&nbsp;<span id="teamWin"></span>&nbsp;commence</h3>
+                    <h3>L'équipe&nbsp;<span id="teamWin"></span><br>&nbsp;commence</h3>
                     <button id="btnClose">GO!!</button>
                 </div>
             </div>
         </div>
-        <button id="btnWin">Qui commence?</button>
+
+        <button id="btnWin">Qui est l'équipe vin rouge?</button>
+
+
+
+
     </section>
 
 
-    <section class="quizz1">
+    <section class="quizz1" id="ancreStart">
         <div class="slider">
             <div class="question">
                 <h2 class="stringQuestion">Prêt pour la première question ?</h2>
@@ -142,15 +146,16 @@
         <div class="questionfinal">
 
 
-            <div class="choco">
-                <img src="assets/Chocolatine-scaled.jpg" alt="chocolatine">
-            </div>
 
-            <div>
+            <div class="chocolatine">
                 <h4> UNE CHOCOLATINE</h4>
             </div>
 
-            <div>
+            <div class="choco">
+                <img src="/assets/chocolatinefinale.jpg" alt="chocolatine" id="chocoId">
+            </div>
+
+            <div class="pain">
                 <h4> UN PAIN AU CHOCOLAT</h4>
             </div>
 
@@ -161,15 +166,18 @@
 
     <footer class="footer">
 
-        <div class="cannele">
-            <img src="/assets/cannelenoiretblanc.png" alt="cannelé">
-            <h5 class="scorecannele">
-                0 </h5>
-        </div>
-        <div class="macaron">
-            <img src="/assets/Logomacaronnoiretblanc.png" alt="macaron">
-            <h5 class="scoremacaron">
-                0 </h5>
+        <div class="logoCompteur">
+
+            <div class="cannele">
+                <img src="/assets/vin rouge.png" alt="vinrouge">
+                <h5 class="scorecannele">
+                    0 </h5>
+            </div>
+            <div class="macaron">
+                <img src="/assets/vin blanc.png" alt="vinblanc">
+                <h5 class="scoremacaron">
+                    0 </h5>
+            </div>
         </div>
 
     </footer>

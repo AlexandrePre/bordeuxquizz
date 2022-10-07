@@ -1,4 +1,3 @@
-
 /* eslint-disable indent */
 /* eslint-disable no-inner-declarations */
 /* eslint-disable no-loop-func */
@@ -8,7 +7,6 @@
 /* eslint-disable no-plusplus */
 /* eslint-disable func-names */
 /* eslint-disable no-unused-expressions */
-
 
 // scroll header
 const header = document.querySelector('.header');
@@ -187,7 +185,7 @@ for (let i = 0; i < answer2.length; i++) {
     }
     if (testAnswer == 'rightAnswer') {
       answer2[i].className = "rightAnswerGreen";
-      if (slideIndex % 2 == 0) {
+      if (slideIndex % 2 != 0) {
         scoreCannele++; scoreCanneleTexte.innerHTML = scoreCannele;
         // eslint-disable-next-line semi
       } else scoreMacaron++;
@@ -195,24 +193,25 @@ for (let i = 0; i < answer2.length; i++) {
     }
   }
   answer2[i].addEventListener('click', testAnswer);
-};
+}
+
 /* question finale */
 
 const chocolatine = document.querySelector('.chocolatine');
 const pain = document.querySelector('.pain');
 const newImg = document.getElementById("chocoId");
 chocolatine.addEventListener('click', () => {
-  newImg.src = "/assets/etchebest-philippe.gif";
-  newImg.style.width = "100%";
-  newImg.style.height = "40vh";
+  newImg.src = "assets/etchebest-philippe.gif";
+  /* newImg.style.width = "100%";
+  newImg.style.height = "50%"; */
   chocolatine.style.display = "none";
   pain.style.display = "none";
 });
 
 pain.addEventListener('click', () => {
-  newImg.src = "/assets/etchebest-xari.gif";
-  newImg.style.width = "100%";
-  newImg.style.height = "50vh";
+  newImg.src = "assets/etchebest-xari.gif";
+  /* newImg.style.width = "100%";
+  newImg.style.height = "50%"; */
   chocolatine.style.display = "none";
   pain.style.display = "none";
 });

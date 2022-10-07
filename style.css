@@ -168,7 +168,7 @@ html {
 .card {
     box-shadow: 10px 10px 25px 10px rgba(0, 0, 0, 0.361);
     border: 3px solid rgba(255, 255, 255, 0.724);
-    background: #f4f6ed;
+    background: #f4f6edd1;
     width: 85vw;
     height: 65vh;
     border-radius: 1em;
@@ -623,7 +623,6 @@ a:visited{
     .questionMort {
         display: flex;
         justify-content: center;
-        gap: none;
     }
     .footer img{
         width: 6em;

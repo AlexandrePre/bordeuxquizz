@@ -185,7 +185,7 @@ for (let i = 0; i < answer2.length; i++) {
     }
     if (testAnswer == 'rightAnswer') {
       answer2[i].className = "rightAnswerGreen";
-      if (slideIndex % 2 == 0) {
+      if (slideIndex % 2 != 0) {
         scoreCannele++; scoreCanneleTexte.innerHTML = scoreCannele;
         // eslint-disable-next-line semi
       } else scoreMacaron++;

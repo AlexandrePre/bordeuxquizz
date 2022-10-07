@@ -17,7 +17,6 @@ html {
 }
 
 /* header */
-
 .header {
     width: 100%;
     background: var(--primary);
@@ -54,10 +53,6 @@ html {
 }
 
 /* home page */
-
-
-
-
 .container {
     display: flex;
     flex-direction: column;
@@ -68,7 +63,6 @@ html {
     height: 100vh;
     grid-row-start: 3;
     grid-row-end: 4;
-
 }
 
 .container a {
@@ -99,7 +93,7 @@ html {
     font-weight: bold;
     background-clip: text;
     -webkit-background-clip: text;
-    background-image: url(/assets/3b7213f7-32a8-4923-bf70-51714fb0945a.webp);
+    background-image: url(assets/3b7213f7-32a8-4923-bf70-51714fb0945a.webp);
     background-position: 50% 55%;
     color: transparent;
     animation: up 3s;
@@ -117,43 +111,32 @@ html {
     }
 }
 
-h2 {
-    text-align: center;
-}
-
-h3 {
-    text-align: center;
-}
-
-h4 {
-    text-align: center;
-}
-
-
 .questionMort {
+    display: flex;
+    justify-content: center;
     height: 100vh;
-    padding-top: 10vh;
+    padding-top: 4vh;
 }
 
 .questionfinal {
-    display: grid;
-    height: 70vh;
-    grid-template-rows: 1fr, 1fr, 1fr;
-    grid-template-columns: 1fr, 1fr, 1fr;
+    display: flex;
+    gap: 3em;
+    flex-direction: column;
     align-items: center;
-    margin: 5vw;
+    justify-content: center;
+    height: 65vh;
     background-color: var(--primary);
     box-shadow: 10px 10px 25px 10px rgba(0, 0, 0, 0.361);
     border: 3px solid rgba(255, 255, 255, 0.724);
-    background: var(--primary);
     width: 90vw;
     border-radius: 1em;
-
+    margin-top: 5em;
 }
 
 .questionfinal h4 {
-    font-size: 8vw;
+    font-size: 1.5em;
     color: #f4f6ed;
+    text-align: center;
 }
 
 .choco {
@@ -162,63 +145,18 @@ h4 {
 }
 
 .choco img {
-    width: 40vw;
+    width: 95%;
 }
 
-.container .button {
+.container  {
     display: flex;
     height: 100vh;
 }
 
-.logoCompteur {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.cannele img {
-
-    width: 20vw;
-    height: 10vh;
-}
-
-.scorecannele {
-    font-size: 110%;
-    color: rgb(236, 11, 11);
-    position: absolute;
-    left: 38%;
-    top: 25%;
-    cursor: pointer;
-
-}
-
-
-
-.macaron img {
-
-    width: 20vw;
-    height: 8vh;
-}
-
-.scoremacaron {
-    font-size: 110%;
-    color: rgb(236, 11, 11);
-    position: absolute;
-    left: 73%;
-    top: 20%;
-    cursor: pointer;
-}
-
-
-
-
-
 /* choose team */
 .team {
     padding-top: 20vh;
-
 }
-
 
 .bigContainer {
     width: 100%;
@@ -238,9 +176,6 @@ h4 {
     border-radius: 1em;
 }
 
-
-
-
 .containerCard {
     height: 100%;
     padding: 1em;
@@ -255,8 +190,6 @@ h4 {
     text-align: center;
 }
 
-
-
 .inputBox h2 {
     display: flex;
     justify-content: center;
@@ -270,7 +203,6 @@ h4 {
     align-items: center;
     margin-top: 3em;
 }
-
 
 .inputBox input {
     background: rgba(255, 255, 255, 0.1);
@@ -294,36 +226,7 @@ h4 {
     color: var(--secondary);
 }
 
-
-
 /* slide */
-
-
-
-
-
-
-
-
-
-
-
-.footer {
-    background: #131734;
-    display: none;
-    bottom: 0;
-    width: 100%;
-}
-
-.footer.scroll1 {
-    display: block;
-    position: fixed;
-    width: 100%;
-    background-color: #131734;
-}
-
-
-
 .modal {
     display: none;
     position: absolute;
@@ -366,6 +269,33 @@ h4 {
 
 .footer img{
     width: 5em;
+    height: 6em;
+}
+
+.logoCompteur{
+    display: flex;
+    justify-content: space-around;
+    gap: 1em;
+}
+
+.cannele, .macaron{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scorecannele, .scoremacaron{
+    color: var(--secondary);
+    font-size: 2.5em;
+}
+
+.winner, .loser{
+    color: var(--secondary);
+    font-size: 1.4em;
+}
+
+.scorevinrouge, .scorevinblanc{
+    text-align: center;
 }
 
 #btnClose {
@@ -405,7 +335,6 @@ a:visited{
 }
 
 .starButton {
-
     height: 5em;
 }
 
@@ -433,9 +362,6 @@ a:visited{
     box-shadow: 0 5px #212967;
 }
 
-
-
-
 .quizz1 {
     height: 100vh;
     display: flex;
@@ -443,7 +369,6 @@ a:visited{
     align-items: center;
     padding-top: 18vh;
 }
-
 
 .slider{
     display: flex;
@@ -463,7 +388,6 @@ a:visited{
     border-radius: 0.8em;
     padding: 0.5em;
 }
-
 
 .fullAnswer img{
     width: 40%;
@@ -540,209 +464,6 @@ a:visited{
     color: var(--primary);
 }
 
-
-@media screen and (min-width: 768px) {
-
-    .header div{
-        height: 12vh;
-    }
-    .header ion-icon{
-        font-size: 3.5em;
-    }
-    .header div a{
-        left: 15%;
-    }
-    .container {
-        padding-top: initial;
-        gap: 6em;
-    }
-    .container a{
-        font-size: 2.5em;
-    }
-    
-    .container ion-icon{
-        font-size: 3em;
-    }
-    .containerTitle{
-        height: 18em;
-    }
-    .team{
-        padding-top: 24vh;
-        height: 100vh;
-    }
-    .questionfinal {
-        display: grid;
-        grid-template-rows: 2fr, 1fr, 1fr;
-        grid-template-columns: 1fr, 1fr, fr;
-        align-items: center;
-        background-color: var(--primary);
-        box-shadow: 10px 10px 25px 10px rgba(0, 0, 0, 0.361);
-        border: 3px solid rgba(255, 255, 255, 0.724);
-        background: var(--primary);
-        border-radius: 1em;
-        width: 90vw;
-        height: 60vh;
-    }
-
-    .questionfinal h4 {
-        font-size: 5vw;
-    }
-
-.containerCard p{
-    font-size: 1.3em;
-}
-
-    .footer {
-        background: #131734;
-        display: none;
-        bottom: 0;
-        width: 100%;
-    }
-    .footer.scroll1 {
-        display: block;
-        position: fixed;
-        width: 100%;
-        background-color: #131734;
-    }
-    .cannele img {
-        width: 20vw;
-        height: 20vh;
-    }
-    .scorecannele {
-        font-size: 2.5em;
-        color: rgb(236, 11, 11);
-        position: absolute;
-        left: 24.5%;
-        top: 44%;
-    }
-.macaron{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-    .scoremacaron {
-        font-size: 2.5em;
-        color: rgb(236, 11, 11);
-        position: absolute;
-        left: 76%;
-        top: 44%;
-    }
-    .bigContainer {
-        display: flex;
-        justify-content: center;
-        gap: 10em;
-    }
-    .card {
-        width: 30em;
-    }
-    
-    .modal {
-        display: none;
-        position: absolute;
-        top: 110%;
-        left: center;
-    }
-    .classModal {
-        border: black solid 1px;
-        padding: em;
-        height: 40em;
-        width: 30em;
-        background: #fff;
-        border-radius: 1em;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .classModal h3 {
-        margin-top: 1em;
-        margin-bottom: 1em;
-        font-size: 2em;
-    }
-    .classModal img {
-         width: 22em;
-    }
-    #btnClose {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border: none;
-        background: none;
-        border: solid 1px black;
-        border-radius: 0.5em;
-        background: var(--primary);
-        width: 7em;
-        height: 2em;
-        color: white;
-        font-size: 2em;
-        box-shadow: 0 6px #303c91;
-        padding: 0.6em;
-    }
-    .header ion-icon {
-        font-size: 3.5em;
-    }
-    .header div a {
-        left: 15%;
-    }
-    .container {
-        padding-top: initial;
-        gap: 10em;
-    }
-    .container a {
-        font-size: 2.5em;
-    }
-    .container ion-icon {
-        font-size: 3em;
-    }
-    .containerTitle {
-        height: 18em;
-    }
-    .team {
-        padding-top: 15vh;
-        height: 100vh;
-        background: url(/assets/bridge-4120830_1920\ copie.jpg);
-        background-size: cover;
-        background-position: center;
-    }
-    .fullAnswer img:nth-child(1){
-        width: 60%;
-    }
-    .slider{
-        width: 60%;
-    }
-    .cont-btn {
-    margin-top: 1em;
-}
-.fullAnswer h3{
-    width: 40%;
-    margin: 0.5em;
-}
-.fullAnswer img{
-    width: 35%;
-}
-.choco img {
-    width: 20%;
-}
- .chocolatine h4{
-    font-size: 3em;
-}
-.pain h4{
-    font-size: 2.5em;
-}
-.questionfinal {
-    width: 50%;
-    height: 70%;
-}
-.questionMort {
-display: flex;
-    justify-content: center;
-}
-
-}
-
-.loser{
-    color: #fff;
-}
-
 #winner, #looser{
     width: 6em;
     height: 6em;
@@ -775,4 +496,139 @@ display: flex;
 
 .chocolatine, .pain{
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+    .header div{
+        height: 12vh;
+    }
+    .header ion-icon{
+        font-size: 3.5em;
+    }
+    .header div a{
+        left: 15%;
+    }
+    .container {
+        padding-top: initial;
+        gap: 6em;
+    }
+    .container a{
+        font-size: 2.5em;
+    }
+    
+    .container ion-icon{
+        font-size: 3em;
+    }
+    .containerTitle{
+        height: 18em;
+    }
+    .team{
+        padding-top: 24vh;
+        height: 100vh;
+    }
+
+    .containerCard p{
+        font-size: 1.3em;
+    }
+    .bigContainer {
+        display: flex;
+        justify-content: center;
+        gap: 10em;
+    }
+    .card {
+        width: 30em;
+    }
+    .modal {
+        display: none;
+        position: absolute;
+        top: 113%;
+        left: center;
+    }
+    .classModal {
+        height: 82vh;
+        width: 30em;
+    }
+    .classModal h3 {
+        margin-top: 1em;
+        margin-bottom: 1em;
+        font-size: 2em;
+    }
+    .classModal img {
+         width: 22em;
+    }
+    #btnClose {
+        width: 7em;
+        height: 2em;
+        font-size: 2em;
+        padding: 0.6em;
+    }
+    .header ion-icon {
+        font-size: 3.5em;
+    }
+    .header div a {
+        left: 15%;
+    }
+    .container {
+        padding-top: initial;
+        gap: 10em;
+    }
+    .container a {
+        font-size: 2.5em;
+    }
+    .container ion-icon {
+        font-size: 3em;
+    }
+    .containerTitle {
+        height: 18em;
+    }
+    .team {
+        padding-top: 15vh;
+        height: 100vh;
+        background: url(assets/bridge-4120830_1920\ copie.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    .fullAnswer img:nth-child(1){
+        width: 60%;
+    }
+    .slider{
+        width: 60%;
+    }
+    .cont-btn {
+    margin-top: 1em;
+    }
+    .fullAnswer h3{
+        width: 40%;
+        margin: 0.5em;
+    }
+    .fullAnswer img{
+        width: 30%;
+    }
+    .choco img {
+        width: 55%;
+    }
+    .chocolatine h4{
+        font-size: 2.4em;
+    }
+    .pain h4{
+        font-size: 2.4em;
+    }
+    .questionfinal {
+        width: 45%;
+        height: 65%;
+        gap: initial;
+        margin-top: 6em;
+
+    }
+    .questionMort {
+        display: flex;
+        justify-content: center;
+        gap: none;
+    }
+    .footer img{
+        width: 6em;
+        height: 8em;
+    }
 }

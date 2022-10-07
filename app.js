@@ -193,24 +193,25 @@ for (let i = 0; i < answer2.length; i++) {
     }
   }
   answer2[i].addEventListener('click', testAnswer);
-};
+}
+
 /* question finale */
 
 const chocolatine = document.querySelector('.chocolatine');
 const pain = document.querySelector('.pain');
 const newImg = document.getElementById("chocoId");
 chocolatine.addEventListener('click', () => {
-  newImg.src = "/assets/etchebest-philippe.gif";
-  newImg.style.width = "100%";
-  newImg.style.height = "40vh";
+  newImg.src = "assets/etchebest-philippe.gif";
+  /* newImg.style.width = "100%";
+  newImg.style.height = "50%"; */
   chocolatine.style.display = "none";
   pain.style.display = "none";
 });
 
 pain.addEventListener('click', () => {
-  newImg.src = "/assets/etchebest-xari.gif";
-  newImg.style.width = "100%";
-  newImg.style.height = "50vh";
+  newImg.src = "assets/etchebest-xari.gif";
+  /* newImg.style.width = "100%";
+  newImg.style.height = "50%"; */
   chocolatine.style.display = "none";
   pain.style.display = "none";
 });

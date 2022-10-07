@@ -1,5 +1,3 @@
-
-
 html {
     scroll-behavior: smooth;
 }
@@ -631,4 +629,8 @@ a:visited{
         width: 6em;
         height: 8em;
     }
+    
+.chocolatine, .pain{
+    cursor: pointer;
 }
+

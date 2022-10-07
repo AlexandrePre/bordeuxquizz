@@ -1,4 +1,3 @@
-
 /* eslint-disable indent */
 /* eslint-disable no-inner-declarations */
 /* eslint-disable no-loop-func */
@@ -216,4 +215,3 @@ pain.addEventListener('click', () => {
   chocolatine.style.display = "none";
   pain.style.display = "none";
 });
-

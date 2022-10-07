@@ -1,5 +1,3 @@
-
-
 html {
     scroll-behavior: smooth;
 }
@@ -242,7 +240,6 @@ h4 {
 
 
 .containerCard {
-    
     height: 100%;
     padding: 1em;
     border-radius: 1em;
@@ -343,6 +340,7 @@ h4 {
     width: 85vw;
     height: 65vh;
 }
+
 .classModal h3 {
     margin-top: 1em;
     margin-bottom: 0.5em;
@@ -365,7 +363,7 @@ h4 {
     position: fixed;
 }
 
-.footer img{
+.footer img {
     width: 5em;
 }
 
@@ -396,12 +394,12 @@ h4 {
     box-shadow: 0 4px #212967;
 }
 
-a{
+a {
     text-decoration: none;
     color: var(--secondary);
 }
 
-a:visited{
+a:visited {
     text-decoration: none;
 }
 
@@ -466,11 +464,11 @@ a:visited{
 }
 
 
-.fullAnswer img{
+.fullAnswer img {
     width: 40%;
 }
 
-.fullAnswer img:nth-child(1){
+.fullAnswer img:nth-child(1) {
     width: 80%;
 }
 
@@ -486,8 +484,8 @@ a:visited{
 
 .question h2 {
     text-align: center;
-    font-size: 7.5vw;
-    padding-bottom: 2.5vh;
+    font-size: 1.7em;
+    padding-bottom: 3vh;
 }
 
 .question h2:hover {
@@ -499,7 +497,7 @@ a:visited{
     width: 90%;
     text-align: center;
     color: var(--secondary);
-    font-size: 6.5vw;
+    font-size: 1.3em;
     border: 2px solid yellow;
     padding: 0.5em;
     border-radius: 1em;
@@ -512,7 +510,7 @@ a:visited{
 }
 
 
-.fullAnswer h3:nth-child(1){
+.fullAnswer h3:nth-child(1) {
     border: 2px solid orange;
 }
 
@@ -537,7 +535,7 @@ a:visited{
     cursor: pointer;
 }
 
-.cont-btn ion-icon{
+.cont-btn ion-icon {
     font-size: 5em;
     color: var(--primary);
 }
@@ -545,33 +543,40 @@ a:visited{
 
 @media screen and (min-width: 768px) {
 
-    .header div{
+    .header div {
         height: 12vh;
     }
-    .header ion-icon{
+
+    .header ion-icon {
         font-size: 3.5em;
     }
-    .header div a{
+
+    .header div a {
         left: 15%;
     }
+
     .container {
         padding-top: initial;
         gap: 6em;
     }
-    .container a{
+
+    .container a {
         font-size: 2.5em;
     }
-    
-    .container ion-icon{
+
+    .container ion-icon {
         font-size: 3em;
     }
-    .containerTitle{
+
+    .containerTitle {
         height: 18em;
     }
-    .team{
+
+    .team {
         padding-top: 24vh;
         height: 100vh;
     }
+
     .questionfinal {
         display: grid;
         grid-template-rows: 2fr, 1fr, 1fr;
@@ -587,25 +592,12 @@ a:visited{
     }
 
     .questionfinal h4 {
-        font-size: 2vw;
+        font-size: 5vw;
     }
 
-    .choco {
-        display: flex;
-        justify-content: center;
-
-
+    .containerCard p {
+        font-size: 1.3em;
     }
-
-    .choco img {
-
-        width: 20vw;
-
-    }
-
-.containerCard p{
-    font-size: 1.3em;
-}
 
     .footer {
         background: #131734;
@@ -613,16 +605,19 @@ a:visited{
         bottom: 0;
         width: 100%;
     }
+
     .footer.scroll1 {
         display: block;
         position: fixed;
         width: 100%;
         background-color: #131734;
     }
+
     .cannele img {
         width: 20vw;
         height: 20vh;
     }
+
     .scorecannele {
         font-size: 2.5em;
         color: rgb(236, 11, 11);
@@ -630,11 +625,13 @@ a:visited{
         left: 24.5%;
         top: 44%;
     }
-.macaron{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
+    .macaron {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     .scoremacaron {
         font-size: 2.5em;
         color: rgb(236, 11, 11);
@@ -642,21 +639,24 @@ a:visited{
         left: 76%;
         top: 44%;
     }
+
     .bigContainer {
         display: flex;
         justify-content: center;
         gap: 10em;
     }
+
     .card {
         width: 30em;
     }
-    
+
     .modal {
         display: none;
         position: absolute;
         top: 110%;
         left: center;
     }
+
     .classModal {
         border: black solid 1px;
         padding: em;
@@ -668,14 +668,17 @@ a:visited{
         flex-direction: column;
         align-items: center;
     }
+
     .classModal h3 {
         margin-top: 1em;
         margin-bottom: 1em;
         font-size: 2em;
     }
+
     .classModal img {
-         width: 22em;
+        width: 22em;
     }
+
     #btnClose {
         display: flex;
         align-items: center;
@@ -692,25 +695,32 @@ a:visited{
         box-shadow: 0 6px #303c91;
         padding: 0.6em;
     }
+
     .header ion-icon {
         font-size: 3.5em;
     }
+
     .header div a {
         left: 15%;
     }
+
     .container {
         padding-top: initial;
         gap: 10em;
     }
+
     .container a {
         font-size: 2.5em;
     }
+
     .container ion-icon {
         font-size: 3em;
     }
+
     .containerTitle {
         height: 18em;
     }
+
     .team {
         padding-top: 15vh;
         height: 100vh;
@@ -718,55 +728,66 @@ a:visited{
         background-size: cover;
         background-position: center;
     }
-    .fullAnswer img:nth-child(1){
+
+    .fullAnswer img:nth-child(1) {
         width: 60%;
     }
-    .slider{
+
+    .slider {
         width: 60%;
     }
+
     .cont-btn {
-    margin-top: 1em;
-}
-.fullAnswer h3{
-    width: 40%;
-    margin: 0.5em;
-}
-.fullAnswer img{
-    width: 35%;
-}
-.choco img {
-    width: 20%;
-}
- .chocolatine h4{
-    font-size: 3em;
-}
-.pain h4{
-    font-size: 2.5em;
-}
-.questionfinal {
-    width: 50%;
-    height: 70%;
-}
-.questionMort {
-display: flex;
-    justify-content: center;
-}
+        margin-top: 1em;
+    }
+
+    .fullAnswer h3 {
+        width: 40%;
+        margin: 0.5em;
+    }
+
+    .fullAnswer img {
+        width: 35%;
+    }
+
+    .choco img {
+        width: 20%;
+    }
+
+    .chocolatine h4 {
+        font-size: 3em;
+    }
+
+    .pain h4 {
+        font-size: 2.5em;
+    }
+
+    .questionfinal {
+        width: 50%;
+        height: 70%;
+    }
+
+    .questionMort {
+        display: flex;
+        justify-content: center;
+    }
 
 }
 
-.loser{
+.loser {
     color: #fff;
 }
 
-#winner, #looser{
+#winner,
+#looser {
     width: 6em;
     height: 6em;
 }
 
-.btnMort{
+.btnMort {
     display: flex;
     justify-content: center;
-    align-items: center;   
+    align-items: center;
     margin: auto;
     margin-top: 1em;
     border: none;
@@ -788,6 +809,7 @@ display: flex;
     box-shadow: 0 5px #212967;
 }
 
-.chocolatine, .pain{
+.chocolatine,
+.pain {
     cursor: pointer;
 }

@@ -1,3 +1,4 @@
+
 /* eslint-disable indent */
 /* eslint-disable no-inner-declarations */
 /* eslint-disable no-loop-func */
@@ -57,21 +58,21 @@ const btnWin = document.getElementById('btnWin');
 const winnerTexte = document.querySelector('.winner');
 const loserTexte = document.querySelector('.loser');
 btnWin.addEventListener('click', () => {
-    const modal = document.getElementById('modal');
-    const teamWin = document.getElementById('teamWin');
-    if (random < 50) {
-        ((modal.style.display = 'flex') && (teamWin.innerHTML = team1.innerHTML) && (btnWin.style.display = 'none'));
-        const winner = team1.innerHTML;
-        const loser = team2.innerHTML;
-        winnerTexte.innerHTML = winner;
-        loserTexte.innerHTML = loser;
-    } else {
-        ((modal.style.display = 'flex') && (teamWin.innerHTML = team2.innerHTML) && (btnWin.style.display = 'none'));
-        const winner = team2.innerHTML;
-        const loser = team1.innerHTML;
-        winnerTexte.innerHTML = winner;
-        loserTexte.innerHTML = loser;
-    }
+  const modal = document.getElementById('modal');
+  const teamWin = document.getElementById('teamWin');
+  if (random < 50) {
+    ((modal.style.display = 'flex') && (teamWin.innerHTML = team1.innerHTML) && (btnWin.style.display = 'none'));
+    const winner = team1.innerHTML;
+    const loser = team2.innerHTML;
+    winnerTexte.innerHTML = winner;
+    loserTexte.innerHTML = loser;
+  } else {
+    ((modal.style.display = 'flex') && (teamWin.innerHTML = team2.innerHTML) && (btnWin.style.display = 'none'));
+    const winner = team2.innerHTML;
+    const loser = team1.innerHTML;
+    winnerTexte.innerHTML = winner;
+    loserTexte.innerHTML = loser;
+  }
   btnWin.onsubmit = function (event) {
     event.preventDefault();
   };
@@ -120,9 +121,9 @@ function slideSuivante() {
     slideIndex = 1;
   }
   items[slideIndex].style.display = 'block';
-if (slideIndex === nbSlide - 1) {
-  suivant.style.display = 'none';
-}
+  if (slideIndex === nbSlide - 1) {
+    suivant.style.display = 'none';
+  }
   // remise à zéro des classes bonne et mauvaise réponse : function dans la function
   function testAnswer2() {
     for (let i = 0; i < answer2.length; i++) {
@@ -215,4 +216,3 @@ pain.addEventListener('click', () => {
   chocolatine.style.display = "none";
   pain.style.display = "none";
 });
-
